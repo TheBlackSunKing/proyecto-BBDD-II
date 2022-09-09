@@ -7,8 +7,10 @@
 
                     <div class="card-body">
                         <form action="">
-                            <label for="" class="form-control mb-2">Usuario</label>
-                            <label for="" class="form-control mb-2">contraseña</label>
+                            <label for="">Usuario</label>
+                            <input type="text" class="form-control mb-2">
+                            <label for="">contraseña</label>
+                            <input type="text" class="form-control mb-2">
                             <button class="btn btn-secondary">login</button>
                         </form>
                     </div>
