@@ -5333,6 +5333,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   mounted: function mounted() {
     console.log('Component mounted.');
@@ -28263,24 +28265,28 @@ var staticRenderFns = [
     return _c("div", { staticClass: "container" }, [
       _c("div", { staticClass: "row justify-content-center" }, [
         _c("div", { staticClass: "col-md-8" }, [
-          _c("div", { staticClass: "card" }, [
-            _c("div", { staticClass: "card-header" }, [
-              _vm._v("Example Component"),
-            ]),
+          _c("div", { staticClass: "card text-white bg-dark" }, [
+            _c("div", { staticClass: "card-header" }, [_vm._v("Ingrese")]),
             _vm._v(" "),
             _c("div", { staticClass: "card-body" }, [
               _c("form", { attrs: { action: "" } }, [
-                _c("input", {
-                  staticClass: "form-control mb-2",
-                  attrs: { type: "text" },
-                }),
+                _c("label", { attrs: { for: "" } }, [_vm._v("Usuario")]),
                 _vm._v(" "),
                 _c("input", {
                   staticClass: "form-control mb-2",
                   attrs: { type: "text" },
                 }),
                 _vm._v(" "),
-                _c("button", [_vm._v("login")]),
+                _c("label", { attrs: { for: "" } }, [_vm._v("contraseña")]),
+                _vm._v(" "),
+                _c("input", {
+                  staticClass: "form-control mb-2",
+                  attrs: { type: "text" },
+                }),
+                _vm._v(" "),
+                _c("button", { staticClass: "btn btn-secondary" }, [
+                  _vm._v("login"),
+                ]),
               ]),
             ]),
           ]),
