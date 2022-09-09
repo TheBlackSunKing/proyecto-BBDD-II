@@ -148,7 +148,7 @@ function popperGenerator(generatorOptions) {
       // is useful for low frequency updates where sync behavior simplifies the
       // logic.
       // For high frequency updates (e.g. `resize` and `scroll` events), always
-      // prefer the async Popper#update method //
+      // prefer the async Popper#update method
       forceUpdate: function forceUpdate() {
         if (isDestroyed) {
           return;
