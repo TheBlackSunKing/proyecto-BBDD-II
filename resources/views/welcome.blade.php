@@ -10,7 +10,7 @@
 
         <footer class="mastfoot mt-auto">
         <div class="inner">
-          <p>proyecto hecho por Jose Emilio Yepez y Helvis Eloy Basantes.</p>
+          <p>Proyecto hecho por José Emilio Yépez y Helvis Eloy Basantes.</p>
         </div>
       
 	</div>
