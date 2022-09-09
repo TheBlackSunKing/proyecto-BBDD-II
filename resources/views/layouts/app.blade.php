@@ -12,7 +12,7 @@
 	<div id="app">
 		<navbar-component></navbar-component>
         <hr>
-		<login-component></login-component>
+		@yield('content') <!---hago referencia a lo que esta dentro de section--->
 		
 	</div>
 	
