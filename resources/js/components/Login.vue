@@ -6,7 +6,11 @@
                     <div class="card-header">Example Component</div>
 
                     <div class="card-body">
-                        I'm an example component.
+                        <form action="">
+                            <input type="text" class="form-control mb-2">
+                            <input type="text" class="form-control mb-2">
+                            <button>login</button>
+                        </form>
                     </div>
                 </div>
             </div>
