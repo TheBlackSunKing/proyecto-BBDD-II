@@ -10,6 +10,7 @@
 <body>
 	<div id="app">
 		<navbar-component></navbar-component>
+        <hr>
 		<login-component></login-component>
 		
 	</div>

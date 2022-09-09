@@ -2,14 +2,14 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8">
-                <div class="card">
-                    <div class="card-header">Example Component</div>
+                <div class="card text-white bg-dark">
+                    <div class="card-header">Ingrese</div>
 
                     <div class="card-body">
                         <form action="">
-                            <input type="text" class="form-control mb-2">
-                            <input type="text" class="form-control mb-2">
-                            <button>login</button>
+                            <label for="" class="form-control mb-2">Usuario</label>
+                            <label for="" class="form-control mb-2">contraseña</label>
+                            <button class="btn btn-secondary">login</button>
                         </form>
                     </div>
                 </div>
