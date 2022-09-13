@@ -1,9 +1,18 @@
 <template>
-	<nav class="navbar navbar-dark bg-dark">
-        <a href="#" class="navbar-brand">Home</a>
-        <a href="#" class="navbar-brand">login</a>
-        <a href="#" class="navbar-brand">registre</a>
-    </nav>
+    <main>
+        <nav class="navbar navbar-dark bg-dark">
+            <router-link to="/">home</router-link>
+            <router-link to=/login>login</router-link>
+        </nav>
+
+        <div>
+            <router-view></router-view>    
+        </div>
+
+        
+    </main>
+	
+
 </template>
 
 <script>

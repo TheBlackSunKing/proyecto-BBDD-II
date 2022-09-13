@@ -8,6 +8,18 @@ require('./bootstrap');
 
 window.Vue = require('vue').default;
 
+import App from './components/App.vue'
+import VueRouter from 'vue-router';
+import { routes } from './routes';
+
+Vue.use(VueRouter);
+
+const router=new VueRouter({
+    mode:'history',
+    routes: routes
+
+});
+
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
@@ -19,8 +31,16 @@ window.Vue = require('vue').default;
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
+/**
+ *esto de aqui ya no es necesario, de hecho estorba para que 
+ * se vea la barra de navegacion y lo demas
+ *  
 Vue.component('login-component', require('./components/Login.vue').default);
 Vue.component('navbar-component', require('./components/NavBar.vue').default);
+Vue.component('home-component', require('./components/Home.vue').default);
+Vue.component('app-component', require('./components/Home.vue').default);
+*/
+
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -30,4 +50,6 @@ Vue.component('navbar-component', require('./components/NavBar.vue').default);
 
 const app = new Vue({
     el: '#app',
+    router:router,
+    render:h=>h(App)
 });

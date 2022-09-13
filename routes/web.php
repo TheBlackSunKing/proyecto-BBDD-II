@@ -13,10 +13,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('welcome');
-});
+});*/
 
-Route::get('/login', function () {
+Route::get('{any}', function () {
+    return view('layouts.app');
+})->where('any','.*');
+
+/**
+ * ya en el archivo routes.js manejamos las rotas para el frontent, creo que
+ * aqui deberiamos manejar todas las del
+ * 
+ * Route::get('/login', function () {
     return view('layouts.login');
-});
+});*/
