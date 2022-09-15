@@ -10,7 +10,8 @@
         </nav>
 
         <div>
-            <router-view></router-view>    
+            <router-view></router-view> 
+            <foocompnt-component></foocompnt-component>   
         </div>
 
         

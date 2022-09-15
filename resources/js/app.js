@@ -35,12 +35,12 @@ const router=new VueRouter({
  *esto de aqui ya no es necesario, de hecho estorba para que 
  * se vea la barra de navegacion y lo demas
  *  
-Vue.component('login-component', require('./components/Login.vue').default);
+
 Vue.component('navbar-component', require('./components/NavBar.vue').default);
 Vue.component('home-component', require('./components/Home.vue').default);
 Vue.component('app-component', require('./components/Home.vue').default);
 */
-
+Vue.component('foocompnt', require('./components/Footer.vue'));
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -53,3 +53,11 @@ const app = new Vue({
     router:router,
     render:h=>h(App)
 });
+
+/**lo de arriba y esto son basicamente lo mismo
+ * Real
+*  render: function (createElement) {
+   return createElement(App);
+   }
+ * 
+ */
