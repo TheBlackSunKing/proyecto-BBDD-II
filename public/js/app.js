@@ -5335,6 +5335,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   mounted: function mounted() {
     console.log('barra de navegacion puesta');
@@ -5494,6 +5498,23 @@ var Home = function Home() {
 
 var Login = function Login() {
   return __webpack_require__.e(/*! import() */ "resources_js_components_Login_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/Login.vue */ "./resources/js/components/Login.vue"));
+};
+
+var CreateClienteView = function CreateClienteView() {
+  return __webpack_require__.e(/*! import() */ "resources_js_components_CrudClientes_CreateClienteView_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/CrudClientes/CreateClienteView.vue */ "./resources/js/components/CrudClientes/CreateClienteView.vue"));
+};
+
+var ShowClientesView = function ShowClientesView() {
+  return __webpack_require__.e(/*! import() */ "resources_js_components_CrudClientes_ShowClientes_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/CrudClientes/ShowClientes.vue */ "./resources/js/components/CrudClientes/ShowClientes.vue"));
+}; //no me gusta estar importando tantas cosas, pero francamente no se que mas hacer
+
+
+var CreateRutasView = function CreateRutasView() {
+  return __webpack_require__.e(/*! import() */ "resources_js_components_CrudRutas_CreateRutasView_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/CrudRutas/CreateRutasView.vue */ "./resources/js/components/CrudRutas/CreateRutasView.vue"));
+};
+
+var ShowRutasView = function ShowRutasView() {
+  return __webpack_require__.e(/*! import() */ "resources_js_components_CrudRutas_ShowRutas_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/CrudRutas/ShowRutas.vue */ "./resources/js/components/CrudRutas/ShowRutas.vue"));
 }; //esto es equivalente a poner lo que a continuacion se encuentra en app.js de resources: 
 //Vue.component('login-component', require('./components/Login.vue').default);
 
@@ -5507,6 +5528,22 @@ var routes = [{
   name: 'home',
   path: '/',
   component: Home
+}, {
+  name: 'sing-up',
+  path: '/sing-up',
+  component: CreateClienteView
+}, {
+  name: 'rutasCrear',
+  path: '/createrutas',
+  component: CreateRutasView
+}, {
+  name: 'clientes',
+  path: '/clientes',
+  component: ShowClientesView
+}, {
+  name: 'rutas',
+  path: '/showrutas',
+  component: ShowRutasView
 }];
 
 /***/ }),
@@ -28337,17 +28374,29 @@ var render = function () {
           [_vm._v("login")]
         ),
         _vm._v(" "),
-        _c("router-link", { staticClass: "navbar-brand", attrs: { to: "#" } }, [
-          _vm._v("Link-1"),
-        ]),
+        _c(
+          "router-link",
+          { staticClass: "navbar-brand", attrs: { to: "sing-up" } },
+          [_vm._v("Sing up")]
+        ),
         _vm._v(" "),
-        _c("router-link", { staticClass: "navbar-brand", attrs: { to: "#" } }, [
-          _vm._v("Link-2"),
-        ]),
+        _c(
+          "router-link",
+          { staticClass: "navbar-brand", attrs: { to: "/showrutas" } },
+          [_vm._v("Rutas")]
+        ),
         _vm._v(" "),
-        _c("router-link", { staticClass: "navbar-brand", attrs: { to: "#" } }, [
-          _vm._v("Link-3"),
-        ]),
+        _c(
+          "router-link",
+          { staticClass: "navbar-brand", attrs: { to: "/createrutas" } },
+          [_vm._v("Nueva ruta")]
+        ),
+        _vm._v(" "),
+        _c(
+          "router-link",
+          { staticClass: "navbar-brand", attrs: { to: "/clientes" } },
+          [_vm._v("Clientes")]
+        ),
       ],
       1
     ),
@@ -43398,7 +43447,7 @@ module.exports = JSON.parse('{"_args":[["axios@0.21.4","C:\\\\laragon\\\\www\\\\
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames not based on template
-/******/ 			if ({"resources_js_components_Home_vue":1,"resources_js_components_Login_vue":1}[chunkId]) return "js/" + chunkId + ".js";
+/******/ 			if ({"resources_js_components_Home_vue":1,"resources_js_components_Login_vue":1,"resources_js_components_CrudClientes_CreateClienteView_vue":1,"resources_js_components_CrudClientes_ShowClientes_vue":1,"resources_js_components_CrudRutas_CreateRutasView_vue":1,"resources_js_components_CrudRutas_ShowRutas_vue":1}[chunkId]) return "js/" + chunkId + ".js";
 /******/ 			// return url for filenames based on template
 /******/ 			return undefined;
 /******/ 		};

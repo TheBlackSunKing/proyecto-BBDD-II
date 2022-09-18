@@ -7,11 +7,15 @@
 
                     <div class="card-body">
                         <form action="">
-                            <label for="">Usuario</label>
+                            <label for="">Salida</label>
                             <input type="text" class="form-control mb-2">
-                            <label for="">contraseña</label>
+                            <label for="">Destino</label>
                             <input type="text" class="form-control mb-2">
-                            <router-link to="/" class="btn btn-secondary">login</router-link>
+                            <label for="">Precio</label>
+                            <input type="text" class="form-control mb-2">
+                            <label for="">hora de salida</label>
+                            <input type="text" class="form-control mb-2">
+                            <router-link to="/" class="btn btn-secondary">Crear</router-link>
                             
                         </form>
                     </div>
@@ -20,12 +24,3 @@
         </div>
     </div>
 </template>
-
-<script>
-    export default {
-        mounted() {
-            console.log('Component mounted.')
-        }
-    }
-    
-</script>

@@ -1,10 +1,11 @@
 <template>
-	<div class="text-center text-white cover-container d-flex h-100 p-3 mx-auto flex-column">
+	<div class="text-center text-white cover-container d-flex h-100 p-3 mx-auto flex-column mt-5">
         
-        <h1 class="cover-heading text-white">ESTO ES UN TITULO.</h1>
-        <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing, elit. Saepe ipsa eius optio maxime nostrum dolore iste ipsam necessitatibus reprehenderit, amet quia facere et accusamus suscipit cumque itaque fugiat consequuntur! Animi.</p>
+        <h1 class="cover-heading text-white">JGTRAVELS VIAJES A TU ALCANCE.</h1>
+        <p class="lead">Bienvenido a JGTravels, por favor ingrese o registrese</p>
         <p class="lead">
-          <a href="#" class="btn btn-lg btn-secondary">Learn more</a>
+          <router-link to="/login" class="btn btn-lg btn-secondary">Ingresar</router-link>
+          <router-link to="/sing-up" class="btn btn-lg btn-secondary">Registrarse</router-link>
         </p>
 
         <footer class="mastfoot mt-auto">

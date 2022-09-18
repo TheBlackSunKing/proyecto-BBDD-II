@@ -7,11 +7,17 @@
 
                     <div class="card-body">
                         <form action="">
-                            <label for="">Usuario</label>
+                            <label for="">Cedula</label>
                             <input type="text" class="form-control mb-2">
-                            <label for="">contraseña</label>
+                            <label for="">Nombre y Apellido</label>
                             <input type="text" class="form-control mb-2">
-                            <router-link to="/" class="btn btn-secondary">login</router-link>
+                            <label for="">Nombre Completo</label>
+                            <input type="text" class="form-control mb-2">
+                            <label for="">Nombre de usuario</label>
+                            <input type="text" class="form-control mb-2">
+                            <label for="">Contraseña</label>
+                            <input type="text" class="form-control mb-2">
+                            <router-link to="/" class="btn btn-secondary">Completar</router-link>
                             
                         </form>
                     </div>
@@ -20,12 +26,3 @@
         </div>
     </div>
 </template>
-
-<script>
-    export default {
-        mounted() {
-            console.log('Component mounted.')
-        }
-    }
-    
-</script>

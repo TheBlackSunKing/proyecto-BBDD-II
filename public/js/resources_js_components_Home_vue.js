@@ -28,6 +28,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   mounted: function mounted() {
     console.log('CASA PUESTA');
@@ -120,49 +121,64 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c(
+    "div",
+    {
+      staticClass:
+        "text-center text-white cover-container d-flex h-100 p-3 mx-auto flex-column mt-5",
+    },
+    [
+      _c("h1", { staticClass: "cover-heading text-white" }, [
+        _vm._v("JGTRAVELS VIAJES A TU ALCANCE."),
+      ]),
+      _vm._v(" "),
+      _c("p", { staticClass: "lead" }, [
+        _vm._v("Bienvenido a JGTravels, por favor ingrese o registrese"),
+      ]),
+      _vm._v(" "),
+      _c(
+        "p",
+        { staticClass: "lead" },
+        [
+          _c(
+            "router-link",
+            {
+              staticClass: "btn btn-lg btn-secondary",
+              attrs: { to: "/login" },
+            },
+            [_vm._v("Ingresar")]
+          ),
+          _vm._v(" "),
+          _c(
+            "router-link",
+            {
+              staticClass: "btn btn-lg btn-secondary",
+              attrs: { to: "/sing-up" },
+            },
+            [_vm._v("Registrarse")]
+          ),
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _vm._m(0),
+    ]
+  )
 }
 var staticRenderFns = [
   function () {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      {
-        staticClass:
-          "text-center text-white cover-container d-flex h-100 p-3 mx-auto flex-column",
-      },
-      [
-        _c("h1", { staticClass: "cover-heading text-white" }, [
-          _vm._v("ESTO ES UN TITULO."),
-        ]),
-        _vm._v(" "),
-        _c("p", { staticClass: "lead" }, [
+    return _c("footer", { staticClass: "mastfoot mt-auto" }, [
+      _c("div", { staticClass: "inner" }, [
+        _c("p", [
           _vm._v(
-            "Lorem ipsum dolor sit amet consectetur adipisicing, elit. Saepe ipsa eius optio maxime nostrum dolore iste ipsam necessitatibus reprehenderit, amet quia facere et accusamus suscipit cumque itaque fugiat consequuntur! Animi."
+            "proyecto hecho por Jose Emilio Yepez y Helvis Eloy Basantes."
           ),
         ]),
-        _vm._v(" "),
-        _c("p", { staticClass: "lead" }, [
-          _c(
-            "a",
-            { staticClass: "btn btn-lg btn-secondary", attrs: { href: "#" } },
-            [_vm._v("Learn more")]
-          ),
-        ]),
-        _vm._v(" "),
-        _c("footer", { staticClass: "mastfoot mt-auto" }, [
-          _c("div", { staticClass: "inner" }, [
-            _c("p", [
-              _vm._v(
-                "proyecto hecho por Jose Emilio Yepez y Helvis Eloy Basantes."
-              ),
-            ]),
-          ]),
-        ]),
-      ]
-    )
+      ]),
+    ])
   },
 ]
 render._withStripped = true
