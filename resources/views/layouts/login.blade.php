@@ -1,6 +1,6 @@
-@extends('layouts.app')
+{{--@extends('layouts.app')
 @section('content')
     <login-component></login-component>
-@endsection
+@endsection--}}
 
 

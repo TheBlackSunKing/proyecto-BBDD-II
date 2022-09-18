@@ -10,9 +10,7 @@
 </head>
 <body>
 	<div id="app">
-		<navbar-component></navbar-component>
-        <hr>
-		@yield('content') <!---hago referencia a lo que esta dentro de section--->
+
 		
 	</div>
 	
