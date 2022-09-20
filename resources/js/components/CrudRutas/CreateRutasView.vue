@@ -14,7 +14,7 @@
                             <label for="">Precio</label>
                             <input type="text" class="form-control mb-2">
                             <label for="">hora de salida</label>
-                            <input type="text" class="form-control mb-2">
+                            <input type="time" class="form-control mb-2">
                             <router-link to="/" class="btn btn-secondary">Crear</router-link>
                             
                         </form>

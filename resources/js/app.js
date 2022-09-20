@@ -40,7 +40,6 @@ Vue.component('navbar-component', require('./components/NavBar.vue').default);
 Vue.component('home-component', require('./components/Home.vue').default);
 Vue.component('app-component', require('./components/Home.vue').default);
 */
-Vue.component('foocompnt', require('./components/Footer.vue'));
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

@@ -9,14 +9,14 @@
                         <form action="">
                             <label for="">Cedula</label>
                             <input type="text" class="form-control mb-2">
-                            <label for="">Nombre y Apellido</label>
-                            <input type="text" class="form-control mb-2">
                             <label for="">Nombre Completo</label>
                             <input type="text" class="form-control mb-2">
-                            <label for="">Nombre de usuario</label>
+                            <label for="">Direccion</label>
                             <input type="text" class="form-control mb-2">
-                            <label for="">Contraseña</label>
+                            <label for="">Telefono</label>
                             <input type="text" class="form-control mb-2">
+                            <label for="">E-mail</label>
+                            <input type="email" class="form-control mb-2">
                             <router-link to="/" class="btn btn-secondary">Completar</router-link>
                             
                         </form>

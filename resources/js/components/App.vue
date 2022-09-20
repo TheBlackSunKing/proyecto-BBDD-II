@@ -3,19 +3,52 @@
         <nav class="navbar navbar-dark bg-dark">
             <router-link to="/" class="navbar-brand">home</router-link>
             <router-link to="/login" class="navbar-brand">login</router-link>
-            <router-link to="sing-up" class="navbar-brand">Sing up</router-link>
-            <router-link to="/showrutas" class="navbar-brand">Rutas</router-link> 
-            <router-link to="/createrutas" class="navbar-brand">Nueva ruta</router-link> 
-            <!--creo que seria bueno hacer un menu desplegable para las rutas
-                la idea que tengo es que el administrador haga de todo y luego 
-                ir quitando cosas segun el usuario-->
-            <router-link to=/clientes class="navbar-brand">Clientes</router-link>
+<!--_______________________________________rutas y novedad__________________________________________________________-->
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="rutas" data-bs-toggle="dropdown" aria-expanded="false">rutas</button>
+                    <ul class="dropdown-menu" aria-labelledby="rutas">
+                        <li><router-link to="/showrutas" class="dropdown-item">Rutas</router-link></li>
+                        <li><router-link to="/createrutas" class="dropdown-item">Nueva ruta</router-link> </li>
+                        <li><router-link to="/createnovedad" class="dropdown-item">¿Alguna novedad?</router-link> </li>
+                    </ul>
+            </div>
+             
+<!--_______________________________________clientes__________________________________________________________-->
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="clientes" data-bs-toggle="dropdown" aria-expanded="false">clientes</button>
+                    <ul class="dropdown-menu" aria-labelledby="clientes">
+                        <li><router-link to="/clientes" class="dropdown-item">ver clientes</router-link></li>
+                        <li><router-link to="/createcliente" class="dropdown-item">Registrar</router-link> </li>
+                    </ul>
+            </div>
+<!--_______________________________________pasajes__________________________________________________________-->
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="pasaje" data-bs-toggle="dropdown" aria-expanded="false">Pasaje</button>
+                    <ul class="dropdown-menu" aria-labelledby="pasaje">
+                        <li><router-link to="/createpasaje" class="dropdown-item">Generar</router-link></li>
+                        
+                    </ul>
+            </div>
+
+<!--_______________________________________autobus__________________________________________________________-->            
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="clientes" data-bs-toggle="dropdown" aria-expanded="false">autobuses</button>
+                    <ul class="dropdown-menu" aria-labelledby="clientes">
+                        <li><router-link to="/createbuses" class="dropdown-item">Registrar</router-link> </li>
+                    </ul>
+            </div>
+<!--_______________________________________empleado__________________________________________________________-->            
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="clientes" data-bs-toggle="dropdown" aria-expanded="false">Empleados</button>
+                    <ul class="dropdown-menu" aria-labelledby="clientes">
+                        <li><router-link to="/createempleado" class="dropdown-item">Registrar</router-link> </li>
+                    </ul>
+            </div>
 
         </nav>
 
         <div>
             <router-view></router-view> 
-            <foocompnt-component></foocompnt-component>   
         </div>
 
         

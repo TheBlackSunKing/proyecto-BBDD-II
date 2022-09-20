@@ -153,7 +153,7 @@ var render = function () {
                 _vm._v(" "),
                 _c(
                   "router-link",
-                  { staticClass: "btn btn-secondary", attrs: { to: "/" } },
+                  { staticClass: "btn btn-secondary", attrs: { to: "#" } },
                   [_vm._v("login")]
                 ),
               ],

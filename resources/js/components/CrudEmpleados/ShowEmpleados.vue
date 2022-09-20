@@ -9,6 +9,7 @@
                                 <th>ID</th>
                                 <th>Nombre</th>
                                 <th>cedula</th>
+                                <th>cargo</th>
                             </tr>
                         </thead>
                         <tbody> <!--podria usarse vfor para crear la lista por ahora hago esta plantilla-->
@@ -16,6 +17,7 @@
                                 <td>1</td>
                                 <td>Helvis Basantes</td>
                                 <td>27016062</td>
+                                <th>vendedor</th>
                             </tr>
                         </tbody>
                     </table>

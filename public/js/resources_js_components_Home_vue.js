@@ -153,7 +153,7 @@ var render = function () {
             "router-link",
             {
               staticClass: "btn btn-lg btn-secondary",
-              attrs: { to: "/sing-up" },
+              attrs: { to: "createempleado" },
             },
             [_vm._v("Registrarse")]
           ),

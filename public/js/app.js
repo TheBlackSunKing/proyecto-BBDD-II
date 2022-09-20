@@ -5339,35 +5339,42 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   mounted: function mounted() {
     console.log('barra de navegacion puesta');
-  }
-});
-
-/***/ }),
-
-/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Footer.vue?vue&type=script&lang=js&":
-/*!*************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Footer.vue?vue&type=script&lang=js& ***!
-  \*************************************************************************************************************************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-//
-//
-//
-//
-//
-//
-//
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  mounted: function mounted() {
-    console.log('ESTO ES');
   }
 });
 
@@ -5420,7 +5427,6 @@ Vue.component('home-component', require('./components/Home.vue').default);
 Vue.component('app-component', require('./components/Home.vue').default);
 */
 
-Vue.component('foocompnt', __webpack_require__(/*! ./components/Footer.vue */ "./resources/js/components/Footer.vue"));
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -5498,7 +5504,8 @@ var Home = function Home() {
 
 var Login = function Login() {
   return __webpack_require__.e(/*! import() */ "resources_js_components_Login_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/Login.vue */ "./resources/js/components/Login.vue"));
-};
+}; //-----------------------cliente--------------------------------------------
+
 
 var CreateClienteView = function CreateClienteView() {
   return __webpack_require__.e(/*! import() */ "resources_js_components_CrudClientes_CreateClienteView_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/CrudClientes/CreateClienteView.vue */ "./resources/js/components/CrudClientes/CreateClienteView.vue"));
@@ -5507,6 +5514,7 @@ var CreateClienteView = function CreateClienteView() {
 var ShowClientesView = function ShowClientesView() {
   return __webpack_require__.e(/*! import() */ "resources_js_components_CrudClientes_ShowClientes_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/CrudClientes/ShowClientes.vue */ "./resources/js/components/CrudClientes/ShowClientes.vue"));
 }; //no me gusta estar importando tantas cosas, pero francamente no se que mas hacer
+//-----------------------ruta--------------------------------------------
 
 
 var CreateRutasView = function CreateRutasView() {
@@ -5515,35 +5523,77 @@ var CreateRutasView = function CreateRutasView() {
 
 var ShowRutasView = function ShowRutasView() {
   return __webpack_require__.e(/*! import() */ "resources_js_components_CrudRutas_ShowRutas_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/CrudRutas/ShowRutas.vue */ "./resources/js/components/CrudRutas/ShowRutas.vue"));
+}; //-----------------------pasaje--------------------------------------------
+
+
+var CreatePasajesView = function CreatePasajesView() {
+  return __webpack_require__.e(/*! import() */ "resources_js_components_pasaje_CreatePasajeView_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/pasaje/CreatePasajeView.vue */ "./resources/js/components/pasaje/CreatePasajeView.vue"));
+}; //-----------------------empleado---------------------------------------------
+
+
+var CreateEmpleadoView = function CreateEmpleadoView() {
+  return __webpack_require__.e(/*! import() */ "resources_js_components_CrudEmpleados_CreateEmpleadosView_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/CrudEmpleados/CreateEmpleadosView.vue */ "./resources/js/components/CrudEmpleados/CreateEmpleadosView.vue"));
+}; //-----------------------buses---------------------------------------------
+
+
+var CreateBusesView = function CreateBusesView() {
+  return __webpack_require__.e(/*! import() */ "resources_js_components_CrudBuses_CreateBusesView_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/CrudBuses/CreateBusesView.vue */ "./resources/js/components/CrudBuses/CreateBusesView.vue"));
+}; //-----------------------novedad---------------------------------------------
+
+
+var CreateNovedadView = function CreateNovedadView() {
+  return __webpack_require__.e(/*! import() */ "resources_js_components_novedad_CreateNovedadView_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/novedad/CreateNovedadView.vue */ "./resources/js/components/novedad/CreateNovedadView.vue"));
 }; //esto es equivalente a poner lo que a continuacion se encuentra en app.js de resources: 
 //Vue.component('login-component', require('./components/Login.vue').default);
 
 
 var routes = [{
-  //damos un nombre, definimos la ruta e importamos las vistas
-  name: 'login',
-  path: '/login',
-  component: Login
-}, {
   name: 'home',
   path: '/',
   component: Home
 }, {
-  name: 'sing-up',
-  path: '/sing-up',
+  //damos un nombre, definimos la ruta e importamos las vistas
+  name: 'login',
+  path: '/login',
+  component: Login
+}, //----------crud clientes--------------------
+{
+  name: 'clientesCrear',
+  path: '/createcliente',
   component: CreateClienteView
-}, {
-  name: 'rutasCrear',
-  path: '/createrutas',
-  component: CreateRutasView
 }, {
   name: 'clientes',
   path: '/clientes',
   component: ShowClientesView
+}, //----------crud rutas-------------------------	
+{
+  name: 'rutasCrear',
+  path: '/createrutas',
+  component: CreateRutasView
 }, {
   name: 'rutas',
   path: '/showrutas',
   component: ShowRutasView
+}, //-------crud empleados------------------------
+{
+  name: 'empleadosCrear',
+  path: '/createempleado',
+  component: CreateEmpleadoView
+}, //-------crud pasajes-------------------------
+{
+  name: 'pasajeCrear',
+  path: '/createPasaje',
+  component: CreatePasajesView
+}, //--------crud buses--------------------------
+{
+  name: 'busesCrear',
+  path: '/createBuses',
+  component: CreateBusesView
+}, //--------crud novedad--------------------------
+{
+  name: 'novedadCrear',
+  path: '/createnovedad',
+  component: CreateNovedadView
 }];
 
 /***/ }),
@@ -28238,45 +28288,6 @@ component.options.__file = "resources/js/components/App.vue"
 
 /***/ }),
 
-/***/ "./resources/js/components/Footer.vue":
-/*!********************************************!*\
-  !*** ./resources/js/components/Footer.vue ***!
-  \********************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _Footer_vue_vue_type_template_id_61a7c374___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Footer.vue?vue&type=template&id=61a7c374& */ "./resources/js/components/Footer.vue?vue&type=template&id=61a7c374&");
-/* harmony import */ var _Footer_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Footer.vue?vue&type=script&lang=js& */ "./resources/js/components/Footer.vue?vue&type=script&lang=js&");
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
-
-
-
-
-
-/* normalize component */
-;
-var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _Footer_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _Footer_vue_vue_type_template_id_61a7c374___WEBPACK_IMPORTED_MODULE_0__.render,
-  _Footer_vue_vue_type_template_id_61a7c374___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
-  false,
-  null,
-  null,
-  null
-  
-)
-
-/* hot reload */
-if (false) { var api; }
-component.options.__file = "resources/js/components/Footer.vue"
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
-
-/***/ }),
-
 /***/ "./resources/js/components/App.vue?vue&type=script&lang=js&":
 /*!******************************************************************!*\
   !*** ./resources/js/components/App.vue?vue&type=script&lang=js& ***!
@@ -28293,22 +28304,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/js/components/Footer.vue?vue&type=script&lang=js&":
-/*!*********************************************************************!*\
-  !*** ./resources/js/components/Footer.vue?vue&type=script&lang=js& ***!
-  \*********************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Footer_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Footer.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Footer.vue?vue&type=script&lang=js&");
- /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Footer_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
-
-/***/ }),
-
 /***/ "./resources/js/components/App.vue?vue&type=template&id=332fccf4&":
 /*!************************************************************************!*\
   !*** ./resources/js/components/App.vue?vue&type=template&id=332fccf4& ***!
@@ -28322,23 +28317,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_App_vue_vue_type_template_id_332fccf4___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
 /* harmony export */ });
 /* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_App_vue_vue_type_template_id_332fccf4___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./App.vue?vue&type=template&id=332fccf4& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/App.vue?vue&type=template&id=332fccf4&");
-
-
-/***/ }),
-
-/***/ "./resources/js/components/Footer.vue?vue&type=template&id=61a7c374&":
-/*!***************************************************************************!*\
-  !*** ./resources/js/components/Footer.vue?vue&type=template&id=61a7c374& ***!
-  \***************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Footer_vue_vue_type_template_id_61a7c374___WEBPACK_IMPORTED_MODULE_0__.render),
-/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Footer_vue_vue_type_template_id_61a7c374___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
-/* harmony export */ });
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Footer_vue_vue_type_template_id_61a7c374___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Footer.vue?vue&type=template&id=61a7c374& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Footer.vue?vue&type=template&id=61a7c374&");
 
 
 /***/ }),
@@ -28374,60 +28352,256 @@ var render = function () {
           [_vm._v("login")]
         ),
         _vm._v(" "),
-        _c(
-          "router-link",
-          { staticClass: "navbar-brand", attrs: { to: "sing-up" } },
-          [_vm._v("Sing up")]
-        ),
+        _c("div", { staticClass: "dropdown" }, [
+          _c(
+            "button",
+            {
+              staticClass: "btn btn-secondary dropdown-toggle",
+              attrs: {
+                type: "button",
+                id: "rutas",
+                "data-bs-toggle": "dropdown",
+                "aria-expanded": "false",
+              },
+            },
+            [_vm._v("rutas")]
+          ),
+          _vm._v(" "),
+          _c(
+            "ul",
+            {
+              staticClass: "dropdown-menu",
+              attrs: { "aria-labelledby": "rutas" },
+            },
+            [
+              _c(
+                "li",
+                [
+                  _c(
+                    "router-link",
+                    {
+                      staticClass: "dropdown-item",
+                      attrs: { to: "/showrutas" },
+                    },
+                    [_vm._v("Rutas")]
+                  ),
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "li",
+                [
+                  _c(
+                    "router-link",
+                    {
+                      staticClass: "dropdown-item",
+                      attrs: { to: "/createrutas" },
+                    },
+                    [_vm._v("Nueva ruta")]
+                  ),
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "li",
+                [
+                  _c(
+                    "router-link",
+                    {
+                      staticClass: "dropdown-item",
+                      attrs: { to: "/createnovedad" },
+                    },
+                    [_vm._v("¿Alguna novedad?")]
+                  ),
+                ],
+                1
+              ),
+            ]
+          ),
+        ]),
         _vm._v(" "),
-        _c(
-          "router-link",
-          { staticClass: "navbar-brand", attrs: { to: "/showrutas" } },
-          [_vm._v("Rutas")]
-        ),
+        _c("div", { staticClass: "dropdown" }, [
+          _c(
+            "button",
+            {
+              staticClass: "btn btn-secondary dropdown-toggle",
+              attrs: {
+                type: "button",
+                id: "clientes",
+                "data-bs-toggle": "dropdown",
+                "aria-expanded": "false",
+              },
+            },
+            [_vm._v("clientes")]
+          ),
+          _vm._v(" "),
+          _c(
+            "ul",
+            {
+              staticClass: "dropdown-menu",
+              attrs: { "aria-labelledby": "clientes" },
+            },
+            [
+              _c(
+                "li",
+                [
+                  _c(
+                    "router-link",
+                    {
+                      staticClass: "dropdown-item",
+                      attrs: { to: "/clientes" },
+                    },
+                    [_vm._v("ver clientes")]
+                  ),
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "li",
+                [
+                  _c(
+                    "router-link",
+                    {
+                      staticClass: "dropdown-item",
+                      attrs: { to: "/createcliente" },
+                    },
+                    [_vm._v("Registrar")]
+                  ),
+                ],
+                1
+              ),
+            ]
+          ),
+        ]),
         _vm._v(" "),
-        _c(
-          "router-link",
-          { staticClass: "navbar-brand", attrs: { to: "/createrutas" } },
-          [_vm._v("Nueva ruta")]
-        ),
+        _c("div", { staticClass: "dropdown" }, [
+          _c(
+            "button",
+            {
+              staticClass: "btn btn-secondary dropdown-toggle",
+              attrs: {
+                type: "button",
+                id: "pasaje",
+                "data-bs-toggle": "dropdown",
+                "aria-expanded": "false",
+              },
+            },
+            [_vm._v("Pasaje")]
+          ),
+          _vm._v(" "),
+          _c(
+            "ul",
+            {
+              staticClass: "dropdown-menu",
+              attrs: { "aria-labelledby": "pasaje" },
+            },
+            [
+              _c(
+                "li",
+                [
+                  _c(
+                    "router-link",
+                    {
+                      staticClass: "dropdown-item",
+                      attrs: { to: "/createpasaje" },
+                    },
+                    [_vm._v("Generar")]
+                  ),
+                ],
+                1
+              ),
+            ]
+          ),
+        ]),
         _vm._v(" "),
-        _c(
-          "router-link",
-          { staticClass: "navbar-brand", attrs: { to: "/clientes" } },
-          [_vm._v("Clientes")]
-        ),
+        _c("div", { staticClass: "dropdown" }, [
+          _c(
+            "button",
+            {
+              staticClass: "btn btn-secondary dropdown-toggle",
+              attrs: {
+                type: "button",
+                id: "clientes",
+                "data-bs-toggle": "dropdown",
+                "aria-expanded": "false",
+              },
+            },
+            [_vm._v("autobuses")]
+          ),
+          _vm._v(" "),
+          _c(
+            "ul",
+            {
+              staticClass: "dropdown-menu",
+              attrs: { "aria-labelledby": "clientes" },
+            },
+            [
+              _c(
+                "li",
+                [
+                  _c(
+                    "router-link",
+                    {
+                      staticClass: "dropdown-item",
+                      attrs: { to: "/createbuses" },
+                    },
+                    [_vm._v("Registrar")]
+                  ),
+                ],
+                1
+              ),
+            ]
+          ),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "dropdown" }, [
+          _c(
+            "button",
+            {
+              staticClass: "btn btn-secondary dropdown-toggle",
+              attrs: {
+                type: "button",
+                id: "clientes",
+                "data-bs-toggle": "dropdown",
+                "aria-expanded": "false",
+              },
+            },
+            [_vm._v("Empleados")]
+          ),
+          _vm._v(" "),
+          _c(
+            "ul",
+            {
+              staticClass: "dropdown-menu",
+              attrs: { "aria-labelledby": "clientes" },
+            },
+            [
+              _c(
+                "li",
+                [
+                  _c(
+                    "router-link",
+                    {
+                      staticClass: "dropdown-item",
+                      attrs: { to: "/createempleado" },
+                    },
+                    [_vm._v("Registrar")]
+                  ),
+                ],
+                1
+              ),
+            ]
+          ),
+        ]),
       ],
       1
     ),
     _vm._v(" "),
-    _c("div", [_c("router-view"), _vm._v(" "), _c("foocompnt-component")], 1),
+    _c("div", [_c("router-view")], 1),
   ])
-}
-var staticRenderFns = []
-render._withStripped = true
-
-
-
-/***/ }),
-
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Footer.vue?vue&type=template&id=61a7c374&":
-/*!******************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Footer.vue?vue&type=template&id=61a7c374& ***!
-  \******************************************************************************************************************************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "render": () => (/* binding */ render),
-/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
-/* harmony export */ });
-var render = function () {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c("h3", [_vm._v("joihbjbhjOIJINDHBJJHFJOKADOPAJI55555555555555555")])
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -43447,7 +43621,7 @@ module.exports = JSON.parse('{"_args":[["axios@0.21.4","C:\\\\laragon\\\\www\\\\
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames not based on template
-/******/ 			if ({"resources_js_components_Home_vue":1,"resources_js_components_Login_vue":1,"resources_js_components_CrudClientes_CreateClienteView_vue":1,"resources_js_components_CrudClientes_ShowClientes_vue":1,"resources_js_components_CrudRutas_CreateRutasView_vue":1,"resources_js_components_CrudRutas_ShowRutas_vue":1}[chunkId]) return "js/" + chunkId + ".js";
+/******/ 			if ({"resources_js_components_Home_vue":1,"resources_js_components_Login_vue":1,"resources_js_components_CrudClientes_CreateClienteView_vue":1,"resources_js_components_CrudClientes_ShowClientes_vue":1,"resources_js_components_CrudRutas_CreateRutasView_vue":1,"resources_js_components_CrudRutas_ShowRutas_vue":1,"resources_js_components_pasaje_CreatePasajeView_vue":1,"resources_js_components_CrudEmpleados_CreateEmpleadosView_vue":1,"resources_js_components_CrudBuses_CreateBusesView_vue":1,"resources_js_components_novedad_CreateNovedadView_vue":1}[chunkId]) return "js/" + chunkId + ".js";
 /******/ 			// return url for filenames based on template
 /******/ 			return undefined;
 /******/ 		};

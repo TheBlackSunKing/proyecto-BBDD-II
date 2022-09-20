@@ -1,9 +1,9 @@
 "use strict";
-(self["webpackChunk"] = self["webpackChunk"] || []).push([["resources_js_components_CrudRutas_CreateRutasView_vue"],{
+(self["webpackChunk"] = self["webpackChunk"] || []).push([["resources_js_components_novedad_CreateNovedadView_vue"],{
 
-/***/ "./resources/js/components/CrudRutas/CreateRutasView.vue":
+/***/ "./resources/js/components/novedad/CreateNovedadView.vue":
 /*!***************************************************************!*\
-  !*** ./resources/js/components/CrudRutas/CreateRutasView.vue ***!
+  !*** ./resources/js/components/novedad/CreateNovedadView.vue ***!
   \***************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -11,7 +11,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _CreateRutasView_vue_vue_type_template_id_4a6a4107___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./CreateRutasView.vue?vue&type=template&id=4a6a4107& */ "./resources/js/components/CrudRutas/CreateRutasView.vue?vue&type=template&id=4a6a4107&");
+/* harmony import */ var _CreateNovedadView_vue_vue_type_template_id_aedca126___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./CreateNovedadView.vue?vue&type=template&id=aedca126& */ "./resources/js/components/novedad/CreateNovedadView.vue?vue&type=template&id=aedca126&");
 /* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 var script = {}
@@ -21,8 +21,8 @@ var script = {}
 ;
 var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__["default"])(
   script,
-  _CreateRutasView_vue_vue_type_template_id_4a6a4107___WEBPACK_IMPORTED_MODULE_0__.render,
-  _CreateRutasView_vue_vue_type_template_id_4a6a4107___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  _CreateNovedadView_vue_vue_type_template_id_aedca126___WEBPACK_IMPORTED_MODULE_0__.render,
+  _CreateNovedadView_vue_vue_type_template_id_aedca126___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
   false,
   null,
   null,
@@ -32,30 +32,30 @@ var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "resources/js/components/CrudRutas/CreateRutasView.vue"
+component.options.__file = "resources/js/components/novedad/CreateNovedadView.vue"
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
 
 /***/ }),
 
-/***/ "./resources/js/components/CrudRutas/CreateRutasView.vue?vue&type=template&id=4a6a4107&":
+/***/ "./resources/js/components/novedad/CreateNovedadView.vue?vue&type=template&id=aedca126&":
 /*!**********************************************************************************************!*\
-  !*** ./resources/js/components/CrudRutas/CreateRutasView.vue?vue&type=template&id=4a6a4107& ***!
+  !*** ./resources/js/components/novedad/CreateNovedadView.vue?vue&type=template&id=aedca126& ***!
   \**********************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CreateRutasView_vue_vue_type_template_id_4a6a4107___WEBPACK_IMPORTED_MODULE_0__.render),
-/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CreateRutasView_vue_vue_type_template_id_4a6a4107___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CreateNovedadView_vue_vue_type_template_id_aedca126___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CreateNovedadView_vue_vue_type_template_id_aedca126___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
 /* harmony export */ });
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CreateRutasView_vue_vue_type_template_id_4a6a4107___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./CreateRutasView.vue?vue&type=template&id=4a6a4107& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/CrudRutas/CreateRutasView.vue?vue&type=template&id=4a6a4107&");
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CreateNovedadView_vue_vue_type_template_id_aedca126___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./CreateNovedadView.vue?vue&type=template&id=aedca126& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/novedad/CreateNovedadView.vue?vue&type=template&id=aedca126&");
 
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/CrudRutas/CreateRutasView.vue?vue&type=template&id=4a6a4107&":
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/novedad/CreateNovedadView.vue?vue&type=template&id=aedca126&":
 /*!*************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/CrudRutas/CreateRutasView.vue?vue&type=template&id=4a6a4107& ***!
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/novedad/CreateNovedadView.vue?vue&type=template&id=aedca126& ***!
   \*************************************************************************************************************************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -79,6 +79,13 @@ var render = function () {
               "form",
               { attrs: { action: "" } },
               [
+                _c("label", { attrs: { for: "" } }, [_vm._v("Fecha")]),
+                _vm._v(" "),
+                _c("input", {
+                  staticClass: "form-control mb-2",
+                  attrs: { type: "date" },
+                }),
+                _vm._v(" "),
                 _c("label", { attrs: { for: "" } }, [_vm._v("Salida")]),
                 _vm._v(" "),
                 _c("input", {
@@ -93,24 +100,17 @@ var render = function () {
                   attrs: { type: "text" },
                 }),
                 _vm._v(" "),
-                _c("label", { attrs: { for: "" } }, [_vm._v("Precio")]),
+                _c("label", { attrs: { for: "" } }, [_vm._v("descripcion")]),
                 _vm._v(" "),
                 _c("input", {
                   staticClass: "form-control mb-2",
                   attrs: { type: "text" },
                 }),
                 _vm._v(" "),
-                _c("label", { attrs: { for: "" } }, [_vm._v("hora de salida")]),
-                _vm._v(" "),
-                _c("input", {
-                  staticClass: "form-control mb-2",
-                  attrs: { type: "time" },
-                }),
-                _vm._v(" "),
                 _c(
                   "router-link",
                   { staticClass: "btn btn-secondary", attrs: { to: "/" } },
-                  [_vm._v("Crear")]
+                  [_vm._v("Completar")]
                 ),
               ],
               1

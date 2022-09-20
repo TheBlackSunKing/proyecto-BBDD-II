@@ -5,7 +5,7 @@
         <p class="lead">Bienvenido a JGTravels, por favor ingrese o registrese</p>
         <p class="lead">
           <router-link to="/login" class="btn btn-lg btn-secondary">Ingresar</router-link>
-          <router-link to="/sing-up" class="btn btn-lg btn-secondary">Registrarse</router-link>
+          <router-link to="createempleado" class="btn btn-lg btn-secondary">Registrarse</router-link>
         </p>
 
         <footer class="mastfoot mt-auto">
