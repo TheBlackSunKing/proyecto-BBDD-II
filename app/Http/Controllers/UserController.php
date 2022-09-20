@@ -1,19 +1,19 @@
 <?php
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
- 
+use App\user;
 class UserController extends Controller
 {
      
     public function index()
     {
-        return view('users')
+        return view('user')
          
     }
     public function list()
     {
         return response()->json([
-            'users' => \App\Models\User::latest()->get()
+            'user' => \App\Models\User::latest()->get()
         ], Response::HTTP_OK);
          
     }

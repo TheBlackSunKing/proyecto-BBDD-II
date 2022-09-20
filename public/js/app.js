@@ -5461,6 +5461,14 @@ var Login = function Login() {
   return __webpack_require__.e(/*! import() */ "resources_js_components_Login_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/Login.vue */ "./resources/js/components/Login.vue"));
 };
 
+var Register = function Register() {
+  return __webpack_require__.e(/*! import() */ "resources_js_components_Register_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/Register.vue */ "./resources/js/components/Register.vue"));
+};
+
+var Regist = function Regist() {
+  return __webpack_require__.e(/*! import() */ "resources_js_components_Regist_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/Regist.vue */ "./resources/js/components/Regist.vue"));
+};
+
 var routes = [{
   //damos un nombre, definimos la ruta e importamos las vistas
   name: 'login',
@@ -5470,6 +5478,14 @@ var routes = [{
   name: 'home',
   path: '/',
   component: Home
+}, {
+  name: 'R',
+  path: '/R',
+  component: Register
+}, {
+  name: 'registration',
+  path: '/registration',
+  component: Regist
 }];
 
 /***/ }),
@@ -28228,9 +28244,11 @@ var render = function () {
           [_vm._v("login")]
         ),
         _vm._v(" "),
-        _c("router-link", { staticClass: "navbar-brand", attrs: { to: "#" } }, [
-          _vm._v("Link-1"),
-        ]),
+        _c(
+          "router-link",
+          { staticClass: "navbar-brand", attrs: { to: "/registration" } },
+          [_vm._v("registrar")]
+        ),
         _vm._v(" "),
         _c("router-link", { staticClass: "navbar-brand", attrs: { to: "#" } }, [
           _vm._v("Link-2"),
@@ -43559,7 +43577,7 @@ module.exports = JSON.parse('{"_args":[["axios@0.21.4","C:\\\\laragon\\\\www\\\\
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames not based on template
-/******/ 			if ({"resources_js_components_Home_vue":1,"resources_js_components_Login_vue":1}[chunkId]) return "js/" + chunkId + ".js";
+/******/ 			if ({"resources_js_components_Home_vue":1,"resources_js_components_Login_vue":1,"resources_js_components_Register_vue":1,"resources_js_components_Regist_vue":1}[chunkId]) return "js/" + chunkId + ".js";
 /******/ 			// return url for filenames based on template
 /******/ 			return undefined;
 /******/ 		};

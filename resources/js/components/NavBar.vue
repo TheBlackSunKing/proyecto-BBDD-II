@@ -3,6 +3,7 @@
         <nav class="navbar navbar-dark bg-dark">
             <router-link to="/">home</router-link>
             <router-link to=/login>login</router-link>
+            <router-link to=/register>register</router-link>
         </nav>
 
         <div>
