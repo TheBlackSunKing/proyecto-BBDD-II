@@ -14,6 +14,7 @@ const ShowClientesView=()=> import('./components/CrudClientes/ShowClientes.vue')
 
 const CreateRutasView=()=> import('./components/CrudRutas/CreateRutasView.vue');
 const ShowRutasView=()=> import('./components/CrudRutas/ShowRutas.vue');
+const EditRutasView=()=> import('./components/CrudRutas/EditRutasView.vue');
 
 //-----------------------pasaje--------------------------------------------
 const CreatePasajesView=()=> import('./components/pasaje/CreatePasajeView.vue');
@@ -67,6 +68,12 @@ export const routes=[
 		name:'rutas',
 		path:'/showrutas',
 		component:ShowRutasView
+	},
+	{
+		name:'rutasEditar',
+		path:'/editar/:id',
+		component:EditRutasView
+
 	},
 //-------crud empleados------------------------
 	{
