@@ -52,7 +52,7 @@ export default {
             async mostrarRutas(){
                 await this.axios.get('/api/ruta')
                     .then(response=>{
-                        this.rutass=response.data
+                        this.rutas=response.data
                     })
                     .catch(error=>{
                         this.ruta=[]

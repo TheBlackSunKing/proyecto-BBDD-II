@@ -77,7 +77,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
               case 0:
                 _context.next = 2;
                 return _this.axios.get('/api/ruta').then(function (response) {
-                  _this.rutass = response.data;
+                  _this.rutas = response.data;
                 })["catch"](function (error) {
                   _this.ruta = [];
                 });

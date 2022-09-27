@@ -14,7 +14,8 @@ class RutaController extends Controller
      */
     public function index()
     {
-        $rutas=Rutas::all();
+        $rutas=Ruta::all();
+        //$rutas=Rutas::all();
         return response()->json($rutas);
     }
 
@@ -36,7 +37,8 @@ class RutaController extends Controller
      */
     public function store(Request $request)
     {
-        $ruta=Ruta::create($request->post);
+        $ruta=Ruta::create($request->all());
+        //$ruta=Ruta::create($request->post);
         return response()->json([
             'ruta'=>$ruta
         ]);
