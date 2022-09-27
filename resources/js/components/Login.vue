@@ -8,10 +8,10 @@
                     <div class="card-body">
                         <form action="">
                             <label for="">Usuario</label>
-                            <input type="text"  v-model="datos.user" class="form-control mb-2" placeholder="Usuario">
+                            <input placeholder="Email" type="email" v-model="form.email" class="form-control mb-2">
                             <label for="">contraseña</label>
-                            <input type="password" v-model="datos.password" class="form-control mb-2" placeholder="********">
-                            <button v-on:click.prevent="login()" class="btn btn-secondary">login</button>
+                            <input placeholder="Password" type="password" v-model="form.password" name="password" class="form-control mb-2">
+                            <button v-on:click.prevent="loginUser()" class="btn btn-secondary">login</button>
                         </form>
                     </div>
                 </div>
@@ -21,32 +21,25 @@
 </template>
 
 <script>
-import { tSParenthesizedType } from '@babel/types';
-import axios from 'axios';
-
     export default {
-        data() {
+        data(){
             return{
-                datos:{
-                    username:'',
-                    password:''
+                form:{
+                    email: '',
+                    password: ''
                 },
                 errors: []
             }
         },
-        mounted() {
-            console.log('Component mounted.')
-        },
-        methods: {
-            login(){
-                this.$router.push({name: "home"});
-                axios.post('/api/login', this.datos).then(()=> {
-                    this.$router.push({name: "Home"});
-                }).catch((error) => {
-                    this.error.response.data.errors;
+        methods:{
+             loginUser(){
+                 axios.post('/api/login', this.form).then(() =>{
+                     this.$router.push({ name: "home"});
+                     console.log('Login sucess');                     
+                }).catch((error) =>{
+                this.errors = error.response.data.errors;
                 })
-            }
+             }
         }
     }
-    
-</script>
+    </script>

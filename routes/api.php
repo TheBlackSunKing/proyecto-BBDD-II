@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\LoginController;
 
 
 /*
@@ -16,14 +17,8 @@ use App\Http\Controllers\RegisterController;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
-Route::middleware('auth:sanctum')->get('/athenticated', function () {
-    return true;
-});
 
 //Route::get('register', 'App\Http\Controllers\Api\RegisterController@register');
 Route::post('register', 'App\Http\Controllers\RegisterController@register');
-Route::post('login', 'LoginController@login');
-Route::post('logout', 'LoginController@logout');
+Route::post('login', 'App\Http\Controllers\LoginController@login');
+Route::post('logout', 'App\Http\Controllers\LoginController@logout');
