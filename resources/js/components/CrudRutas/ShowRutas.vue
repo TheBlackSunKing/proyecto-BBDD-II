@@ -25,7 +25,7 @@
                                 <td>{{ ruta.horas }}</td>
                                 <td>
                                     <router-link :to='{name:"rutasEditar", params:{id:ruta.id}}' class="btn btn-info">editar</router-link>
-                                    <a type="button" @click="borrarRuta(blog.id)" class="btn btn-danger">eliminar</a>
+                                    <a type="button" @click="borrarRuta(ruta.id)" class="btn btn-danger">eliminar</a>
                                 </td>
                             </tr>
                         </tbody>
@@ -50,17 +50,17 @@ export default {
 
         methods:{
             async mostrarRutas(){
-                await this.axios.get('/api/blog')
+                await this.axios.get('/api/ruta')
                     .then(response=>{
-                        this.blogs=response.data
+                        this.rutass=response.data
                     })
                     .catch(error=>{
-                        this.blog=[]
+                        this.ruta=[]
                     })
             },
-            borrarBlog(id){
+            borrarRuta(id){
                 if (confirm("desea eliminar la ruta?")) {
-                    this.axios.delete('/api/blog/'+id)
+                    this.axios.delete('/api/ruta/'+id)
                     .then(response=>{
                         this.mostrarRutas()
                     })

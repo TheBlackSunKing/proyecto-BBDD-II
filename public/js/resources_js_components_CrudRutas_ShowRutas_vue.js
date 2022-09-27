@@ -76,10 +76,10 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
             switch (_context.prev = _context.next) {
               case 0:
                 _context.next = 2;
-                return _this.axios.get('/api/blog').then(function (response) {
-                  _this.blogs = response.data;
+                return _this.axios.get('/api/ruta').then(function (response) {
+                  _this.rutass = response.data;
                 })["catch"](function (error) {
-                  _this.blog = [];
+                  _this.ruta = [];
                 });
 
               case 2:
@@ -90,11 +90,11 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         }, _callee);
       }))();
     },
-    borrarBlog: function borrarBlog(id) {
+    borrarRuta: function borrarRuta(id) {
       var _this2 = this;
 
       if (confirm("desea eliminar la ruta?")) {
-        this.axios["delete"]('/api/blog/' + id).then(function (response) {
+        this.axios["delete"]('/api/ruta/' + id).then(function (response) {
           _this2.mostrarRutas();
         })["catch"](function (error) {
           console.log(error);
@@ -251,7 +251,7 @@ var render = function () {
                           attrs: { type: "button" },
                           on: {
                             click: function ($event) {
-                              return _vm.borrarRuta(_vm.blog.id)
+                              return _vm.borrarRuta(ruta.id)
                             },
                           },
                         },

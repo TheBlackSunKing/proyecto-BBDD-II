@@ -6,7 +6,7 @@
                     <div class="card-header">Ingrese</div>
 
                     <div class="card-body">
-                        <form @submit.prevent="crear"> <!--se refuere al metodo en el script de abajo-->
+                        <form v-on:submit.prevent="crear"> <!--se refuere al metodo en el script de abajo-->
                             <label for="">Salida</label>
                             <input type="text" class="form-control mb-2" v-model="ruta.salida">
                             <label for="">Destino</label>
@@ -29,7 +29,7 @@
 
 <script>
 export default{
-    name:"rutasCrear",
+    name:"ruta-crear",
     data(){
         return{
             ruta:{
@@ -43,7 +43,7 @@ export default{
     },
     methods:{
         async crear(){
-            await this.axios.post('api/ruta', this.ruta)
+            await this.axios.post('/api/ruta', this.ruta)
                .then(response=>{
                 this.$router.push({name:"rutas"})
                })
