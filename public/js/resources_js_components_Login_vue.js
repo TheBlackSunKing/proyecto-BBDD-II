@@ -33,10 +33,35 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   mounted: function mounted() {
     console.log('Component mounted.');
+  },
+  data: function data() {
+    return {
+      form: {
+        email: '',
+        password: ''
+      },
+      errors: []
+    };
+  },
+  methods: {
+    login: function login() {
+      var _this = this;
+
+      axios.post('/api/login', this.form).then(function (res) {
+        console.log('res');
+
+        _this.$router.push({
+          name: "home"
+        });
+
+        console.log('Login sucess');
+      })["catch"](function (error) {
+        _this.errors = error.response.data.errors;
+      });
+    }
   }
 });
 
@@ -133,32 +158,73 @@ var render = function () {
           _c("div", { staticClass: "card-header" }, [_vm._v("Ingrese")]),
           _vm._v(" "),
           _c("div", { staticClass: "card-body" }, [
-            _c(
-              "form",
-              { attrs: { action: "" } },
-              [
-                _c("label", { attrs: { for: "" } }, [_vm._v("Usuario")]),
-                _vm._v(" "),
-                _c("input", {
-                  staticClass: "form-control mb-2",
-                  attrs: { type: "text" },
-                }),
-                _vm._v(" "),
-                _c("label", { attrs: { for: "" } }, [_vm._v("contraseña")]),
-                _vm._v(" "),
-                _c("input", {
-                  staticClass: "form-control mb-2",
-                  attrs: { type: "text" },
-                }),
-                _vm._v(" "),
-                _c(
-                  "router-link",
-                  { staticClass: "btn btn-secondary", attrs: { to: "#" } },
-                  [_vm._v("login")]
-                ),
-              ],
-              1
-            ),
+            _c("form", { attrs: { action: "" } }, [
+              _c("label", { attrs: { for: "" } }, [_vm._v("Email")]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.form.email,
+                    expression: "form.email",
+                  },
+                ],
+                staticClass: "form-control mb-2",
+                attrs: { placeholder: "Email", type: "email" },
+                domProps: { value: _vm.form.email },
+                on: {
+                  input: function ($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.form, "email", $event.target.value)
+                  },
+                },
+              }),
+              _vm._v(" "),
+              _c("label", { attrs: { for: "" } }, [_vm._v("contraseña")]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.form.password,
+                    expression: "form.password",
+                  },
+                ],
+                staticClass: "form-control mb-2",
+                attrs: {
+                  placeholder: "Password",
+                  type: "password",
+                  name: "password",
+                },
+                domProps: { value: _vm.form.password },
+                on: {
+                  input: function ($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.form, "password", $event.target.value)
+                  },
+                },
+              }),
+              _vm._v(" "),
+              _c(
+                "button",
+                {
+                  staticClass: "btn btn-secondary",
+                  on: {
+                    click: function ($event) {
+                      $event.preventDefault()
+                      return _vm.login()
+                    },
+                  },
+                },
+                [_vm._v("login")]
+              ),
+            ]),
           ]),
         ]),
       ]),
