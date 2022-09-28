@@ -7,16 +7,18 @@
 
                     <div class="card-body">
                         <form action="">
-                            <label for="">Cedula</label>
-                            <input type="text" class="form-control mb-2">
+                            
                             <label for="">Nombre Completo</label>
-                            <input type="text" class="form-control mb-2">
-                            <label for="">Cargo</label>
-                            <input type="text" class="form-control mb-2">
-
+                            <input type="text"  v-model="form.name" class="form-control mb-2" placeholder="Nombre y Apellido">
+                            <label for="">Email</label>
+                            <input type="email"  v-model="form.email" class="form-control mb-2" placeholder="Email">
+                            <label for="">Cedula</label>
+                            <input type="text"  v-model="form.cedula" class="form-control mb-2" placeholder="Cedula">
                             <label for="">Crear password</label>
-                            <input type="password" class="form-control mb-2">
-                            <router-link to="/" class="btn btn-secondary">Completar</router-link>
+                            <input type="password" v-model="form.password" class="form-control mb-2" placeholder="********">
+                            <label for="">Confirmar password</label>
+                            <input type="password" v-model="form.password_confirmation" class="form-control mb-2" placeholder="********">
+                            <button @click.prevent="saveForm" type="submit" class="flex text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Register</button>
                             
                         </form>
                     </div>
@@ -25,3 +27,30 @@
         </div>
     </div>
 </template>
+<script>
+    export default {
+        data(){
+            return{
+                form:{
+                    name: '',
+                    cedula:'',
+                    email: '',
+                    password:'',
+                    password_confirmation:''
+                },
+                errors:[]
+            }
+        },
+        methods:{
+            saveForm(){
+                axios.post('/api/register', this.form).then(() =>{
+                    console.log('saved');
+                }).catch((error) =>{
+                    this.errors = error.response.data.errors;
+                    console.log(error.response.data.error);
+                })
+                
+            }
+        }
+      }
+    </script>

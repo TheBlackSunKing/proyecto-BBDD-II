@@ -7,12 +7,11 @@
 
                     <div class="card-body">
                         <form action="">
-                            <label for="">Usuario</label>
-                            <input type="text" class="form-control mb-2">
+                            <label for="">Email</label>
+                            <input placeholder="Email" type="email" v-model="form.email" class="form-control mb-2">
                             <label for="">contraseña</label>
-                            <input type="text" class="form-control mb-2">
-                            <router-link to="#" class="btn btn-secondary">login</router-link>
-                            
+                            <input placeholder="Password" type="password" v-model="form.password" name="password" class="form-control mb-2">
+                            <button v-on:click.prevent="login()" class="btn btn-secondary">login</button>
                         </form>
                     </div>
                 </div>
@@ -25,6 +24,27 @@
     export default {
         mounted() {
             console.log('Component mounted.')
+        },
+        data(){
+            return{
+                form:{
+                    email: '',
+                    password: ''
+                },
+                errors: []
+            }
+        },
+        methods:{
+             login(){
+                 axios.post('/api/login', this.form).then(res=>{
+                    console.log('res');          
+                     this.$router.push({ name: "home"});
+                     console.log('Login sucess'); 
+                                         
+                }).catch((error) =>{
+                this.errors = error.response.data.errors;
+                })
+             }
         }
     }
     

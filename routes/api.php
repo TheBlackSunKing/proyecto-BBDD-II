@@ -2,7 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\RegisterController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -19,3 +19,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::resource('ruta', App\Http\Controllers\RutaController::class)->only(['index', 'store', 'update', 'show', 'destroy']);
+Route::post('login', 'App\Http\Controllers\LoginController@login');
+Route::post('register', 'App\Http\Controllers\RegisterController@register');
