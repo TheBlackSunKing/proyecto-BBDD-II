@@ -89,8 +89,10 @@ class RutaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Ruta $ruta)
+    public function destroy($ruta)
     {
+        $post = ruta::find($ruta);
+        $post->delete();
         return response()->json([
             'mensaje'=>'ruta eliminada'
         ]);
