@@ -9,12 +9,14 @@ require('./bootstrap');
 import vue from 'vue';
 
 window.Vue = vue;
+export const eventBus = new Vue(); // añadido de evento
 
 import App from './components/App.vue'
 import VueAxios from 'vue-axios';
 import axios from 'axios';
 import VueRouter from 'vue-router';
 import { routes } from './routes';
+
 
 Vue.use(VueRouter);
 Vue.use(VueAxios,axios);

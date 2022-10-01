@@ -1,9 +1,12 @@
+
+
+
 <template>
     <main>
         <nav class="navbar navbar-dark bg-dark">
             <router-link to="/" class="navbar-brand">home</router-link>
-            <router-link to="/login" class="navbar-brand">login</router-link>
-            <router-link to="logout"  @click.native="logout()" class="navbar-brand">logout</router-link>
+            <router-link v-if="user_data == null" to="/login" class="navbar-brand">login</router-link>
+            <router-link v-if="user_data != null"  to=""  @click.native="logout()" class="navbar-brand">logout</router-link>
 <!--_______________________________________rutas y novedad__________________________________________________________-->
             <div class="dropdown">
                 <button class="btn btn-secondary dropdown-toggle" type="button" id="rutas" data-bs-toggle="dropdown" aria-expanded="false">rutas</button>
@@ -59,20 +62,38 @@
 </template>
 
 <script>
+    import {eventBus} from '../app.js'
     export default {
+        
         mounted() {
             console.log('barra de navegacion puesta');
+            
+            this.storage();
+        },
+        created() {
+            eventBus.$on('fireMethod', () => {
+                this.storage();
+            })
+        },
+        data(){
+            return{
+                user_data: null
+            }
         },
         methods:{
             logout(){
-                localStorage.clear()
+                sessionStorage.clear()
                 console.log ("Te has deslogeado")
+                this.user_data = null;
                 //Post data, crear una funcion que borre el Token antes de terminar con esto
                 /*axios.post('/api/logout').then((res)=>{
                     console.log(res);
                     
                     this.$router.push({ name: "Home"})
                 })*/
+            },
+            storage(){
+                this.user_data = JSON.parse(sessionStorage.getItem('user'));
             }
         }
     }

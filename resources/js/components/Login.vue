@@ -21,6 +21,7 @@
 </template>
 
 <script>
+    import {eventBus} from '../app.js'
     export default {
         mounted() {
             console.log('Component mounted.')
@@ -34,18 +35,20 @@
                 errors: []
             }
         },
+        
         methods:{
              login(){
                  axios.post('/api/login', this.form).then(res=>{
                     //console.log(res);                    
                     //localStorage.setItem('token', JSON.stringify(res.data.data.token)) //store them from response  
-                    localStorage.setItem('user', JSON.stringify((res.data.data)))
+                    sessionStorage.setItem('user', JSON.stringify((res.data.data)))
                     //console.log(localStorage.getItem('token'));
-                    console.log('User:', JSON.parse(localStorage.getItem('user')));
+                    //console.log('User:', JSON.parse(sessionStorage.getItem('user')));
                     console.log('Login sucess');
-                    console.log('Rol:',JSON.parse(localStorage.getItem('user')).user.user_role);        
-                     this.$router.push({ name: "home"});
-                    
+                    console.log('Rol:',JSON.parse(sessionStorage.getItem('user')).user.user_role);     
+                    eventBus.$emit('fireMethod');   
+                    this.$router.push({ name: "home"});
+                     
                                          
                 }).catch((error) =>{
                 this.errors = error.response.data.errors;
