@@ -37,9 +37,15 @@
         methods:{
              login(){
                  axios.post('/api/login', this.form).then(res=>{
-                    console.log('res');          
+                    //console.log(res);                    
+                    //localStorage.setItem('token', JSON.stringify(res.data.data.token)) //store them from response  
+                    localStorage.setItem('user', JSON.stringify((res.data.data)))
+                    //console.log(localStorage.getItem('token'));
+                    console.log('User:', JSON.parse(localStorage.getItem('user')));
+                    console.log('Login sucess');
+                    console.log('Rol:',JSON.parse(localStorage.getItem('user')).user.user_role);        
                      this.$router.push({ name: "home"});
-                     console.log('Login sucess'); 
+                    
                                          
                 }).catch((error) =>{
                 this.errors = error.response.data.errors;

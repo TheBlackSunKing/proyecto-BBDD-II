@@ -5372,9 +5372,22 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   mounted: function mounted() {
     console.log('barra de navegacion puesta');
+  },
+  methods: {
+    logout: function logout() {
+      localStorage.clear();
+      console.log("Te has deslogeado"); //Post data, crear una funcion que borre el Token antes de terminar con esto
+
+      /*axios.post('/api/logout').then((res)=>{
+          console.log(res);
+          
+          this.$router.push({ name: "Home"})
+      })*/
+    }
   }
 });
 
@@ -28382,6 +28395,20 @@ var render = function () {
           "router-link",
           { staticClass: "navbar-brand", attrs: { to: "/login" } },
           [_vm._v("login")]
+        ),
+        _vm._v(" "),
+        _c(
+          "router-link",
+          {
+            staticClass: "navbar-brand",
+            attrs: { to: "logout" },
+            nativeOn: {
+              click: function ($event) {
+                return _vm.logout()
+              },
+            },
+          },
+          [_vm._v("logout")]
         ),
         _vm._v(" "),
         _c("div", { staticClass: "dropdown" }, [

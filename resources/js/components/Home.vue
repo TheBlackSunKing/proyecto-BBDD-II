@@ -18,8 +18,29 @@
 
 <script>
     export default {
-        mounted() {
-            console.log('CASA PUESTA');
+      data(){
+        return{
+            user_data: null
         }
+    },
+    methods:{
+        logout(){
+            axios.post('/api/logout').then((res)=>{
+                this.$router.push({ name: "Home"})
+            })
+        }
+    },
+    mounted() {
+        if (localStorage.getItem('user')!= null) {
+          this.user_data = JSON.parse(localStorage.getItem('user'));
+          if (this.user_data.user.user_role == "Administrador"){
+            console.log('Bienvenido Administrador')
+        }  
+          //console.log(user_data )
+        }else{
+          console.log ("No estas logeado")     
+        }
+               
+      }
     }
 </script>

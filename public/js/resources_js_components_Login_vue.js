@@ -51,13 +51,17 @@ __webpack_require__.r(__webpack_exports__);
       var _this = this;
 
       axios.post('/api/login', this.form).then(function (res) {
-        console.log('res');
+        //console.log(res);                    
+        //localStorage.setItem('token', JSON.stringify(res.data.data.token)) //store them from response  
+        localStorage.setItem('user', JSON.stringify(res.data.data)); //console.log(localStorage.getItem('token'));
+
+        console.log('User:', JSON.parse(localStorage.getItem('user')));
+        console.log('Login sucess');
+        console.log('Rol:', JSON.parse(localStorage.getItem('user')).user.user_role);
 
         _this.$router.push({
           name: "home"
         });
-
-        console.log('Login sucess');
       })["catch"](function (error) {
         _this.errors = error.response.data.errors;
       });

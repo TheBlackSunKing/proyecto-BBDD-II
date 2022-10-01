@@ -30,8 +30,33 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  data: function data() {
+    return {
+      user_data: null
+    };
+  },
+  methods: {
+    logout: function logout() {
+      var _this = this;
+
+      axios.post('/api/logout').then(function (res) {
+        _this.$router.push({
+          name: "Home"
+        });
+      });
+    }
+  },
   mounted: function mounted() {
-    console.log('CASA PUESTA');
+    if (localStorage.getItem('user') != null) {
+      this.user_data = JSON.parse(localStorage.getItem('user'));
+
+      if (this.user_data.user.user_role == "Administrador") {
+        console.log('Bienvenido Administrador');
+      } //console.log(user_data )
+
+    } else {
+      console.log("No estas logeado");
+    }
   }
 });
 
