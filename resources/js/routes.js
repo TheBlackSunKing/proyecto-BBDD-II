@@ -29,7 +29,8 @@ const CreateBusesView=()=> import('./components/CrudBuses/CreateBusesView.vue');
 //-----------------------novedad---------------------------------------------
 const CreateNovedadView=()=> import('./components/novedad/CreateNovedadView.vue');
 
-
+//-----------------------log-----------------------------------------------------
+const ShowLogView=()=>import('./components/Log.vue');
 
 
 //esto es equivalente a poner lo que a continuacion se encuentra en app.js de resources: 
@@ -106,4 +107,10 @@ export const routes=[
 		component:CreateNovedadView
 
 	},
+//-----------LOG-------------------------
+	{
+		name:'log',
+		path:'/log',
+		component:ShowLogView
+	}
 ]

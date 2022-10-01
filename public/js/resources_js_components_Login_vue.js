@@ -11,6 +11,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+/* harmony import */ var _app_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../app.js */ "./resources/js/app.js");
 //
 //
 //
@@ -33,6 +34,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   mounted: function mounted() {
     console.log('Component mounted.');
@@ -53,11 +55,12 @@ __webpack_require__.r(__webpack_exports__);
       axios.post('/api/login', this.form).then(function (res) {
         //console.log(res);                    
         //localStorage.setItem('token', JSON.stringify(res.data.data.token)) //store them from response  
-        localStorage.setItem('user', JSON.stringify(res.data.data)); //console.log(localStorage.getItem('token'));
+        sessionStorage.setItem('user', JSON.stringify(res.data.data)); //console.log(localStorage.getItem('token'));
+        //console.log('User:', JSON.parse(sessionStorage.getItem('user')));
 
-        console.log('User:', JSON.parse(localStorage.getItem('user')));
         console.log('Login sucess');
-        console.log('Rol:', JSON.parse(localStorage.getItem('user')).user.user_role);
+        console.log('Rol:', JSON.parse(sessionStorage.getItem('user')).user.user_role);
+        _app_js__WEBPACK_IMPORTED_MODULE_0__.eventBus.$emit('fireMethod');
 
         _this.$router.push({
           name: "home"

@@ -47,8 +47,8 @@ __webpack_require__.r(__webpack_exports__);
     }
   },
   mounted: function mounted() {
-    if (localStorage.getItem('user') != null) {
-      this.user_data = JSON.parse(localStorage.getItem('user'));
+    if (sessionStorage.getItem('user') != null) {
+      this.user_data = JSON.parse(sessionStorage.getItem('user'));
 
       if (this.user_data.user.user_role == "Administrador") {
         console.log('Bienvenido Administrador');

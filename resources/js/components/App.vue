@@ -49,6 +49,8 @@
                     </ul>
             </div>
 
+            <router-link to="/log" class="navbar-brand">registro</router-link>
+
         </nav>
 
         <div>
