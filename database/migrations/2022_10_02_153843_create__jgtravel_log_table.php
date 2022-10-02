@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class JgtravelLog extends Migration
+class CreateJgtravelLogTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,12 @@ class JgtravelLog extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('jgtravel_logs', function (Blueprint $table) {
+            $table->id();
+            $table->string('tipo');
+            $table->string('descripcion');
+            $table->timestamps();
+        });
     }
 
     /**
@@ -23,6 +28,6 @@ class JgtravelLog extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('jgtravel_logs');
     }
 }

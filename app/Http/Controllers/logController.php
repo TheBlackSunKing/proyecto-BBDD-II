@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\JgtravelLog;
+use App\Models\Jgtravel_Log;
 
 class logController extends Controller
 {

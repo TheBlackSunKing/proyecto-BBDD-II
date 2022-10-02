@@ -13,11 +13,11 @@
                             </tr>
                         </thead>
                         <tbody> 
-                            <tr class="text-white">
-                                <td>1</td>
-                                <td>14-11-2022</td>
-                                <td>venta pasaje</td>
-                                <td>registro usuario</td>
+                            <tr v-for="log in logs" :key="log.id" class="text-white">
+                                <td>{{ log.id }}</td>
+                                <td>{{ log.created_at}}</td>
+                                <td>{{ log.tipo }}</td>
+                                <td>{{ log.descripcion }}</td>
                             </tr>
                         </tbody>
                     </table>
@@ -26,3 +26,39 @@
         </div>
     </div>
 </template>
+<script>
+export default {
+    data(){
+        return{
+            logs:[]
+        }
+    },
+
+    mounted() {
+        this.mostrarlogs()
+    },
+
+    methods:{
+        async mostrarlogs(){
+            await this.axios.get('/api/log')
+                .then(response=>{
+                    this.logs=response.data
+                })
+                .catch(error=>{
+                    this.logs=[]
+                })
+        },
+        borrarlog(id){
+            if (confirm("desea eliminar la ruta?")) {
+                this.axios.delete('/api/log/'+id)
+                .then(response=>{
+                    this.mostrarlogs()
+                })
+                .catch(error=>{
+                    console.log(error)
+                })
+            }
+        }
+    }
+}
+</script>
