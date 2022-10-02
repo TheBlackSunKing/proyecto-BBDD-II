@@ -18,7 +18,7 @@
                             <input type="password" v-model="form.password" class="form-control mb-2" placeholder="********">
                             <label for="">Confirmar password</label>
                             <input type="password" v-model="form.password_confirmation" class="form-control mb-2" placeholder="********">
-                            <button @click.prevent="saveForm" type="submit" class="flex text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Register</button>
+                            <button v-on:click.prevent="saveForm()" class="btn btn-secondary">Registrar</button>
                             
                         </form>
                     </div>
@@ -49,7 +49,7 @@
                     this.errors = error.response.data.errors;
                     console.log(error.response.data.error);
                 })
-                
+                this.$router.push({ name: "home"});
             }
         }
       }

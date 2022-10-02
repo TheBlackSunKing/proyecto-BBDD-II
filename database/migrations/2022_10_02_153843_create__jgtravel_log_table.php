@@ -16,7 +16,7 @@ class CreateJgtravelLogTable extends Migration
         Schema::create('jgtravel_logs', function (Blueprint $table) {
             $table->id();
             $table->string('tipo');
-            $table->string('descripcion');
+            $table->TEXT('descripcion');
             $table->timestamps();
         });
     }

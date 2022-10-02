@@ -11,10 +11,7 @@ class RegisterController extends Controller
 {
     public function register(Request $request)
     {
-        jgtravel_logs::create([
-            "tipo" => 'registro de usuario',
-            'descripcion' => 'se creo el usuario'.$request->email,
-        ]);
+        
         $request->validate([
             'name' => ['required'],
             'cedula' => ['required', 'unique:users'],
@@ -28,6 +25,8 @@ class RegisterController extends Controller
             'email' => $request->email,
             'password' => Hash::make($request->password)
         ]);
+
+        
        
     }
 }

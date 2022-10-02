@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
+use App\Models\JgtravelLog;
 
 class AuthController extends Controller
 {
@@ -34,6 +35,10 @@ class AuthController extends Controller
             'success'=>$success,
             'message'=>$message,
         ];
+        JgtravelLog::create([
+            "tipo" => 'Usuario',
+            'descripcion' => 'Se registro el usuario: '.$request->email,
+        ]);
         return response()->json($response);
     }
 
@@ -66,7 +71,10 @@ class AuthController extends Controller
                 'token'=>$token,
             ],
         ];     
-
+        JgtravelLog::create([
+            "tipo" => 'Usuario',
+            'descripcion' => 'Ingreso el usuario: '.$request->email,
+        ]);
         return response()->json($response, 200);
     }
 

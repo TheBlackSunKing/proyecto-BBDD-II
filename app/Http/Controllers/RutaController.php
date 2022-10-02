@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Ruta;
 use Illuminate\Http\Request;
+use App\Models\JgtravelLog;
+
 
 class RutaController extends Controller
 {
@@ -39,9 +41,14 @@ class RutaController extends Controller
     {
         $ruta=Ruta::create($request->all());
         //$ruta=Ruta::create($request->post);
+        JgtravelLog::create([
+            "tipo" => 'Ruta',
+            'descripcion' => 'Se creo la ruta: '.$ruta,
+        ]);
         return response()->json([
             'ruta'=>$ruta
         ]);
+       
     }
 
     /**
@@ -92,6 +99,10 @@ class RutaController extends Controller
     public function destroy($ruta)
     {
         $post = ruta::find($ruta);
+        JgtravelLog::create([
+            "tipo" => 'Ruta',
+            'descripcion' => 'Se Borro la ruta: '.$post,
+        ]);
         $post->delete();
         return response()->json([
             'mensaje'=>'ruta eliminada'

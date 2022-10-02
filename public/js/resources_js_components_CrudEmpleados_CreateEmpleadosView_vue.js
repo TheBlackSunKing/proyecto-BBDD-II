@@ -63,6 +63,9 @@ __webpack_require__.r(__webpack_exports__);
         _this.errors = error.response.data.errors;
         console.log(error.response.data.error);
       });
+      this.$router.push({
+        name: "home"
+      });
     }
   }
 });
@@ -290,17 +293,15 @@ var render = function () {
               _c(
                 "button",
                 {
-                  staticClass:
-                    "flex text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg",
-                  attrs: { type: "submit" },
+                  staticClass: "btn btn-secondary",
                   on: {
                     click: function ($event) {
                       $event.preventDefault()
-                      return _vm.saveForm.apply(null, arguments)
+                      return _vm.saveForm()
                     },
                   },
                 },
-                [_vm._v("Register")]
+                [_vm._v("Registrar")]
               ),
             ]),
           ]),
