@@ -11,6 +11,10 @@
                             <input placeholder="Email" type="email" v-model="form.email" class="form-control mb-2">
                             <label for="">contraseña</label>
                             <input placeholder="Password" type="password" v-model="form.password" name="password" class="form-control mb-2">
+                            <ul class="form-control mb-2" v-if="errors.length > 0">
+                            <li class="list-group-item" v-for="error in errors" :key="errors.indexOf(error)">
+                            {{ error }}
+                            </li> </ul>
                             <button v-on:click.prevent="login()" class="btn btn-secondary">login</button>
                         </form>
                     </div>
@@ -51,7 +55,13 @@
                      
                                          
                 }).catch((error) =>{
-                this.errors = error.response.data.errors;
+                    //this.errors = error.response.data.errors;
+                    this.errors = []
+                    if (error.response.status == 422) {
+                        this.errors.push("Los datos del usuario no pueden ser verificados");
+                    }else {
+                        this.errors.push("Something went wrong, please refresh and try again.");
+                    }
                 })
              }
         }

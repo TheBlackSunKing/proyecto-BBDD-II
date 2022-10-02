@@ -6,7 +6,7 @@
         <nav class="navbar navbar-dark bg-dark">
             <router-link to="/" class="navbar-brand">home</router-link>
             <router-link v-if="user_data == null" to="/login" class="navbar-brand">login</router-link>
-            <router-link v-if="user_data != null"  to=""  @click.native="logout()" class="navbar-brand">logout</router-link>
+            <router-link v-if="user_data != null"  to=" "  @click.native="logout()" class="navbar-brand">logout</router-link>
 <!--_______________________________________rutas y novedad__________________________________________________________-->
             <div class="dropdown">
                 <button class="btn btn-secondary dropdown-toggle" type="button" id="rutas" data-bs-toggle="dropdown" aria-expanded="false">rutas</button>
@@ -49,7 +49,7 @@
                     </ul>
             </div>
 
-            <router-link to="/log" class="navbar-brand">registro</router-link>
+            <router-link  v-if="user_data != null && user_data.user.user_role == 'Administrador'" to="/log" class="navbar-brand">registro</router-link>
 
         </nav>
 
@@ -79,7 +79,8 @@
         },
         data(){
             return{
-                user_data: null
+                user_data: null,
+                user_role: null
             }
         },
         methods:{
@@ -87,6 +88,7 @@
                 sessionStorage.clear()
                 console.log ("Te has deslogeado")
                 this.user_data = null;
+                this.$router.push({ name: "home"});
                 //Post data, crear una funcion que borre el Token antes de terminar con esto
                 /*axios.post('/api/logout').then((res)=>{
                     console.log(res);
@@ -96,6 +98,12 @@
             },
             storage(){
                 this.user_data = JSON.parse(sessionStorage.getItem('user'));
+                /*
+                if (this.user_data != null){
+                    console.log(this.user_data.user.user_role);
+                    console.log(this.user_data.user.user_role);
+                    this.user_role = this.user_data.user.user_role
+                }*/
             }
         }
     }

@@ -34,6 +34,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   mounted: function mounted() {
@@ -66,7 +70,14 @@ __webpack_require__.r(__webpack_exports__);
           name: "home"
         });
       })["catch"](function (error) {
-        _this.errors = error.response.data.errors;
+        //this.errors = error.response.data.errors;
+        _this.errors = [];
+
+        if (error.response.status == 422) {
+          _this.errors.push("Los datos del usuario no pueden ser verificados");
+        } else {
+          _this.errors.push("Something went wrong, please refresh and try again.");
+        }
       });
     }
   }
@@ -217,6 +228,30 @@ var render = function () {
                   },
                 },
               }),
+              _vm._v(" "),
+              _vm.errors.length > 0
+                ? _c(
+                    "ul",
+                    { staticClass: "form-control mb-2" },
+                    _vm._l(_vm.errors, function (error) {
+                      return _c(
+                        "li",
+                        {
+                          key: _vm.errors.indexOf(error),
+                          staticClass: "list-group-item",
+                        },
+                        [
+                          _vm._v(
+                            "\n                        " +
+                              _vm._s(error) +
+                              "\n                        "
+                          ),
+                        ]
+                      )
+                    }),
+                    0
+                  )
+                : _vm._e(),
               _vm._v(" "),
               _c(
                 "button",
