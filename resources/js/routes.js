@@ -6,6 +6,7 @@ const Login=()=> import('./components/Login.vue');
 
 const CreateClienteView=()=> import('./components/CrudClientes/CreateClienteView.vue');
 const ShowClientesView=()=> import('./components/CrudClientes/ShowClientes.vue');
+const EditClientesView=()=> import('./components/CrudClientes/EditClientesView.vue');
 
 
 //no me gusta estar importando tantas cosas, pero francamente no se que mas hacer
@@ -18,13 +19,19 @@ const EditRutasView=()=> import('./components/CrudRutas/EditRutasView.vue');
 
 //-----------------------pasaje--------------------------------------------
 const CreatePasajesView=()=> import('./components/pasaje/CreatePasajeView.vue');
+const BuscarPasajesView=()=> import('./components/pasaje/BuscarPasajeView.vue');
+const ShowPasajesView=()=> import('./components/pasaje/ShowPasajeView.vue');
 
 //-----------------------empleado---------------------------------------------
 
 const CreateEmpleadoView=()=> import('./components/CrudEmpleados/CreateEmpleadosView.vue');
+const ShowEmpleadosView=()=> import('./components/CrudEmpleados/ShowEmpleados.vue');
+const EditEmpleadosView=()=> import('./components/CrudEmpleados/EditEmpleadosView.vue');
 
 //-----------------------buses---------------------------------------------
 const CreateBusesView=()=> import('./components/CrudBuses/CreateBusesView.vue');
+const ShowBusesView=()=> import('./components/CrudBuses/ShowBuses.vue');
+const EditBusesView=()=> import('./components/CrudBuses/EditBusesView.vue');
 
 //-----------------------novedad---------------------------------------------
 const CreateNovedadView=()=> import('./components/novedad/CreateNovedadView.vue');
@@ -83,6 +90,18 @@ export const routes=[
 		component:CreateEmpleadoView
 
 	},
+	{
+		name:'empleados',
+		path:'/showempleado',
+		component:ShowEmpleadosView
+
+	},
+	{
+		name:'empleadosEditar',
+		path:'/editar/:id',
+		component:EditEmpleadosView
+
+	},
 
 //-------crud pasajes-------------------------
 	{
@@ -91,12 +110,30 @@ export const routes=[
 		component:CreatePasajesView
 
 	},
+	{
+		name:'pasajeBuscar',
+		path:'/searchPasaje',
+		component:BuscarPasajesView
+
+	},
 
 //--------crud buses--------------------------
 	{
 		name:'busesCrear',
 		path:'/createBuses',
 		component:CreateBusesView
+
+	},
+	{
+		name:'empleadosCrear',
+		path:'/createbus',
+		component:ShowBusView
+
+	},
+	{
+		name:'busesEditar',
+		path:'/editar/:id',
+		component:EditBusView
 
 	},
 

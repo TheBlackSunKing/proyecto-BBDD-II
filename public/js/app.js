@@ -5573,6 +5573,10 @@ var CreateClienteView = function CreateClienteView() {
 
 var ShowClientesView = function ShowClientesView() {
   return __webpack_require__.e(/*! import() */ "resources_js_components_CrudClientes_ShowClientes_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/CrudClientes/ShowClientes.vue */ "./resources/js/components/CrudClientes/ShowClientes.vue"));
+};
+
+var EditClientesView = function EditClientesView() {
+  return __webpack_require__.e(/*! import() */ "resources_js_components_CrudClientes_EditClientesView_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/CrudClientes/EditClientesView.vue */ "./resources/js/components/CrudClientes/EditClientesView.vue"));
 }; //no me gusta estar importando tantas cosas, pero francamente no se que mas hacer
 //-----------------------ruta--------------------------------------------
 
@@ -5592,16 +5596,40 @@ var EditRutasView = function EditRutasView() {
 
 var CreatePasajesView = function CreatePasajesView() {
   return __webpack_require__.e(/*! import() */ "resources_js_components_pasaje_CreatePasajeView_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/pasaje/CreatePasajeView.vue */ "./resources/js/components/pasaje/CreatePasajeView.vue"));
+};
+
+var BuscarPasajesView = function BuscarPasajesView() {
+  return __webpack_require__.e(/*! import() */ "resources_js_components_pasaje_BuscarPasajeView_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/pasaje/BuscarPasajeView.vue */ "./resources/js/components/pasaje/BuscarPasajeView.vue"));
+};
+
+var ShowPasajesView = function ShowPasajesView() {
+  return __webpack_require__.e(/*! import() */ "resources_js_components_pasaje_ShowPasajeView_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/pasaje/ShowPasajeView.vue */ "./resources/js/components/pasaje/ShowPasajeView.vue"));
 }; //-----------------------empleado---------------------------------------------
 
 
 var CreateEmpleadoView = function CreateEmpleadoView() {
   return __webpack_require__.e(/*! import() */ "resources_js_components_CrudEmpleados_CreateEmpleadosView_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/CrudEmpleados/CreateEmpleadosView.vue */ "./resources/js/components/CrudEmpleados/CreateEmpleadosView.vue"));
+};
+
+var ShowEmpleadosView = function ShowEmpleadosView() {
+  return __webpack_require__.e(/*! import() */ "resources_js_components_CrudEmpleados_ShowEmpleados_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/CrudEmpleados/ShowEmpleados.vue */ "./resources/js/components/CrudEmpleados/ShowEmpleados.vue"));
+};
+
+var EditEmpleadosView = function EditEmpleadosView() {
+  return __webpack_require__.e(/*! import() */ "resources_js_components_CrudEmpleados_EditEmpleadosView_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/CrudEmpleados/EditEmpleadosView.vue */ "./resources/js/components/CrudEmpleados/EditEmpleadosView.vue"));
 }; //-----------------------buses---------------------------------------------
 
 
 var CreateBusesView = function CreateBusesView() {
   return __webpack_require__.e(/*! import() */ "resources_js_components_CrudBuses_CreateBusesView_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/CrudBuses/CreateBusesView.vue */ "./resources/js/components/CrudBuses/CreateBusesView.vue"));
+};
+
+var ShowBusesView = function ShowBusesView() {
+  return __webpack_require__.e(/*! import() */ "resources_js_components_CrudBuses_ShowBuses_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/CrudBuses/ShowBuses.vue */ "./resources/js/components/CrudBuses/ShowBuses.vue"));
+};
+
+var EditBusesView = function EditBusesView() {
+  return __webpack_require__.e(/*! import() */ "resources_js_components_CrudBuses_EditBusesView_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/CrudBuses/EditBusesView.vue */ "./resources/js/components/CrudBuses/EditBusesView.vue"));
 }; //-----------------------novedad---------------------------------------------
 
 
@@ -5652,16 +5680,36 @@ var routes = [{
   name: 'empleadosCrear',
   path: '/createempleado',
   component: CreateEmpleadoView
+}, {
+  name: 'empleados',
+  path: '/showempleado',
+  component: ShowEmpleadosView
+}, {
+  name: 'empleadosEditar',
+  path: '/editar/:id',
+  component: EditEmpleadosView
 }, //-------crud pasajes-------------------------
 {
   name: 'pasajeCrear',
   path: '/createPasaje',
   component: CreatePasajesView
+}, {
+  name: 'pasajeBuscar',
+  path: '/searchPasaje',
+  component: BuscarPasajesView
 }, //--------crud buses--------------------------
 {
   name: 'busesCrear',
   path: '/createBuses',
   component: CreateBusesView
+}, {
+  name: 'empleadosCrear',
+  path: '/createbus',
+  component: ShowBusView
+}, {
+  name: 'busesEditar',
+  path: '/editar/:id',
+  component: EditBusView
 }, //--------crud novedad--------------------------
 {
   name: 'novedadCrear',
@@ -43642,7 +43690,7 @@ Vue.compile = compileToFunctions;
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"_from":"axios@^0.21","_id":"axios@0.21.4","_inBundle":false,"_integrity":"sha512-ut5vewkiu8jjGBdqpM44XxjuCjq9LAKeHVmoVfHVzy8eHgxxq8SbAVQNovDA8mVi05kP0Ea/n/UzcSHcTJQfNg==","_location":"/axios","_phantomChildren":{},"_requested":{"type":"range","registry":true,"raw":"axios@^0.21","name":"axios","escapedName":"axios","rawSpec":"^0.21","saveSpec":null,"fetchSpec":"^0.21"},"_requiredBy":["#USER","/"],"_resolved":"https://registry.npmjs.org/axios/-/axios-0.21.4.tgz","_shasum":"c67b90dc0568e5c1cf2b0b858c43ba28e2eda575","_spec":"axios@^0.21","_where":"C:\\\\laragon\\\\www\\\\travels","author":{"name":"Matt Zabriskie"},"browser":{"./lib/adapters/http.js":"./lib/adapters/xhr.js"},"bugs":{"url":"https://github.com/axios/axios/issues"},"bundleDependencies":false,"bundlesize":[{"path":"./dist/axios.min.js","threshold":"5kB"}],"dependencies":{"follow-redirects":"^1.14.0"},"deprecated":false,"description":"Promise based HTTP client for the browser and node.js","devDependencies":{"coveralls":"^3.0.0","es6-promise":"^4.2.4","grunt":"^1.3.0","grunt-banner":"^0.6.0","grunt-cli":"^1.2.0","grunt-contrib-clean":"^1.1.0","grunt-contrib-watch":"^1.0.0","grunt-eslint":"^23.0.0","grunt-karma":"^4.0.0","grunt-mocha-test":"^0.13.3","grunt-ts":"^6.0.0-beta.19","grunt-webpack":"^4.0.2","istanbul-instrumenter-loader":"^1.0.0","jasmine-core":"^2.4.1","karma":"^6.3.2","karma-chrome-launcher":"^3.1.0","karma-firefox-launcher":"^2.1.0","karma-jasmine":"^1.1.1","karma-jasmine-ajax":"^0.1.13","karma-safari-launcher":"^1.0.0","karma-sauce-launcher":"^4.3.6","karma-sinon":"^1.0.5","karma-sourcemap-loader":"^0.3.8","karma-webpack":"^4.0.2","load-grunt-tasks":"^3.5.2","minimist":"^1.2.0","mocha":"^8.2.1","sinon":"^4.5.0","terser-webpack-plugin":"^4.2.3","typescript":"^4.0.5","url-search-params":"^0.10.0","webpack":"^4.44.2","webpack-dev-server":"^3.11.0"},"homepage":"https://axios-http.com","jsdelivr":"dist/axios.min.js","keywords":["xhr","http","ajax","promise","node"],"license":"MIT","main":"index.js","name":"axios","repository":{"type":"git","url":"git+https://github.com/axios/axios.git"},"scripts":{"build":"NODE_ENV=production grunt build","coveralls":"cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js","examples":"node ./examples/server.js","fix":"eslint --fix lib/**/*.js","postversion":"git push && git push --tags","preversion":"npm test","start":"node ./sandbox/server.js","test":"grunt test","version":"npm run build && grunt version && git add -A dist && git add CHANGELOG.md bower.json package.json"},"typings":"./index.d.ts","unpkg":"dist/axios.min.js","version":"0.21.4"}');
+module.exports = JSON.parse('{"_from":"axios@^0.21.4","_id":"axios@0.21.4","_inBundle":false,"_integrity":"sha512-ut5vewkiu8jjGBdqpM44XxjuCjq9LAKeHVmoVfHVzy8eHgxxq8SbAVQNovDA8mVi05kP0Ea/n/UzcSHcTJQfNg==","_location":"/axios","_phantomChildren":{},"_requested":{"type":"range","registry":true,"raw":"axios@^0.21.4","name":"axios","escapedName":"axios","rawSpec":"^0.21.4","saveSpec":null,"fetchSpec":"^0.21.4"},"_requiredBy":["/"],"_resolved":"https://registry.npmjs.org/axios/-/axios-0.21.4.tgz","_shasum":"c67b90dc0568e5c1cf2b0b858c43ba28e2eda575","_spec":"axios@^0.21.4","_where":"C:\\\\laragon\\\\www\\\\travels","author":{"name":"Matt Zabriskie"},"browser":{"./lib/adapters/http.js":"./lib/adapters/xhr.js"},"bugs":{"url":"https://github.com/axios/axios/issues"},"bundleDependencies":false,"bundlesize":[{"path":"./dist/axios.min.js","threshold":"5kB"}],"dependencies":{"follow-redirects":"^1.14.0"},"deprecated":false,"description":"Promise based HTTP client for the browser and node.js","devDependencies":{"coveralls":"^3.0.0","es6-promise":"^4.2.4","grunt":"^1.3.0","grunt-banner":"^0.6.0","grunt-cli":"^1.2.0","grunt-contrib-clean":"^1.1.0","grunt-contrib-watch":"^1.0.0","grunt-eslint":"^23.0.0","grunt-karma":"^4.0.0","grunt-mocha-test":"^0.13.3","grunt-ts":"^6.0.0-beta.19","grunt-webpack":"^4.0.2","istanbul-instrumenter-loader":"^1.0.0","jasmine-core":"^2.4.1","karma":"^6.3.2","karma-chrome-launcher":"^3.1.0","karma-firefox-launcher":"^2.1.0","karma-jasmine":"^1.1.1","karma-jasmine-ajax":"^0.1.13","karma-safari-launcher":"^1.0.0","karma-sauce-launcher":"^4.3.6","karma-sinon":"^1.0.5","karma-sourcemap-loader":"^0.3.8","karma-webpack":"^4.0.2","load-grunt-tasks":"^3.5.2","minimist":"^1.2.0","mocha":"^8.2.1","sinon":"^4.5.0","terser-webpack-plugin":"^4.2.3","typescript":"^4.0.5","url-search-params":"^0.10.0","webpack":"^4.44.2","webpack-dev-server":"^3.11.0"},"homepage":"https://axios-http.com","jsdelivr":"dist/axios.min.js","keywords":["xhr","http","ajax","promise","node"],"license":"MIT","main":"index.js","name":"axios","repository":{"type":"git","url":"git+https://github.com/axios/axios.git"},"scripts":{"build":"NODE_ENV=production grunt build","coveralls":"cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js","examples":"node ./examples/server.js","fix":"eslint --fix lib/**/*.js","postversion":"git push && git push --tags","preversion":"npm test","start":"node ./sandbox/server.js","test":"grunt test","version":"npm run build && grunt version && git add -A dist && git add CHANGELOG.md bower.json package.json"},"typings":"./index.d.ts","unpkg":"dist/axios.min.js","version":"0.21.4"}');
 
 /***/ })
 
@@ -43758,7 +43806,7 @@ module.exports = JSON.parse('{"_from":"axios@^0.21","_id":"axios@0.21.4","_inBun
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames not based on template
-/******/ 			if ({"resources_js_components_Home_vue":1,"resources_js_components_Login_vue":1,"resources_js_components_CrudClientes_CreateClienteView_vue":1,"resources_js_components_CrudClientes_ShowClientes_vue":1,"resources_js_components_CrudRutas_CreateRutasView_vue":1,"resources_js_components_CrudRutas_ShowRutas_vue":1,"resources_js_components_CrudRutas_EditRutasView_vue":1,"resources_js_components_pasaje_CreatePasajeView_vue":1,"resources_js_components_CrudEmpleados_CreateEmpleadosView_vue":1,"resources_js_components_CrudBuses_CreateBusesView_vue":1,"resources_js_components_novedad_CreateNovedadView_vue":1,"resources_js_components_Log_vue":1}[chunkId]) return "js/" + chunkId + ".js";
+/******/ 			if ({"resources_js_components_Home_vue":1,"resources_js_components_Login_vue":1,"resources_js_components_CrudClientes_CreateClienteView_vue":1,"resources_js_components_CrudClientes_ShowClientes_vue":1,"resources_js_components_CrudClientes_EditClientesView_vue":1,"resources_js_components_CrudRutas_CreateRutasView_vue":1,"resources_js_components_CrudRutas_ShowRutas_vue":1,"resources_js_components_CrudRutas_EditRutasView_vue":1,"resources_js_components_pasaje_CreatePasajeView_vue":1,"resources_js_components_pasaje_BuscarPasajeView_vue":1,"resources_js_components_pasaje_ShowPasajeView_vue":1,"resources_js_components_CrudEmpleados_CreateEmpleadosView_vue":1,"resources_js_components_CrudEmpleados_ShowEmpleados_vue":1,"resources_js_components_CrudEmpleados_EditEmpleadosView_vue":1,"resources_js_components_CrudBuses_CreateBusesView_vue":1,"resources_js_components_CrudBuses_ShowBuses_vue":1,"resources_js_components_CrudBuses_EditBusesView_vue":1,"resources_js_components_novedad_CreateNovedadView_vue":1,"resources_js_components_Log_vue":1}[chunkId]) return "js/" + chunkId + ".js";
 /******/ 			// return url for filenames based on template
 /******/ 			return undefined;
 /******/ 		};

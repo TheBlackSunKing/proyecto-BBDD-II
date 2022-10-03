@@ -7,14 +7,14 @@
 
                     <div class="card-body">
                         <form action=""> 
-                            <label for="">Salida</label>
+                            <label for="">Modelo</label>
                             <input type="text" class="form-control mb-2" placeholder="en lugar de placeholder, poner la informacion">
-                            <label for="">Destino</label>
+                            <label for="">Placa</label>
                             <input type="text" class="form-control mb-2" placeholder="en lugar de placeholder, poner la informacion">
-                            <label for="">Precio</label>
+                            <label for="">Numero de asientos</label>
                             <input type="number" class="form-control mb-2" placeholder="en lugar de placeholder, poner la informacion">
-                            <label for="">hora de salida</label>
-                            <input type="time" class="form-control mb-2">
+                            <label for="">Año de fabricacion</label>
+                            <input type="text" class="form-control mb-2">
                             
                             <button type="submit" class="btn btn-primary">guardar</button>
                             

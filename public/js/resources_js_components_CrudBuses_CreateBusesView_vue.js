@@ -68,17 +68,21 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "container mt-4" }, [
-    _c("div", { staticClass: "row justify-content-center" }, [
-      _c("div", { staticClass: "col-md-8" }, [
-        _c("div", { staticClass: "card text-white bg-dark" }, [
-          _c("div", { staticClass: "card-header" }, [_vm._v("Ingrese")]),
-          _vm._v(" "),
-          _c("div", { staticClass: "card-body" }, [
-            _c(
-              "form",
-              { attrs: { action: "" } },
-              [
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "container mt-4" }, [
+      _c("div", { staticClass: "row justify-content-center" }, [
+        _c("div", { staticClass: "col-md-8" }, [
+          _c("div", { staticClass: "card text-white bg-dark" }, [
+            _c("div", { staticClass: "card-header" }, [_vm._v("Ingrese")]),
+            _vm._v(" "),
+            _c("div", { staticClass: "card-body" }, [
+              _c("form", { attrs: { action: "" } }, [
                 _c("label", { attrs: { for: "" } }, [_vm._v("Modelo")]),
                 _vm._v(" "),
                 _c("input", {
@@ -109,21 +113,17 @@ var render = function () {
                   attrs: { type: "text " },
                 }),
                 _vm._v(" "),
-                _c(
-                  "router-link",
-                  { staticClass: "btn btn-secondary", attrs: { to: "/" } },
-                  [_vm._v("Completar")]
-                ),
-              ],
-              1
-            ),
+                _c("button", { staticClass: "btn btn-secondary" }, [
+                  _vm._v("Completar"),
+                ]),
+              ]),
+            ]),
           ]),
         ]),
       ]),
-    ]),
-  ])
-}
-var staticRenderFns = []
+    ])
+  },
+]
 render._withStripped = true
 
 

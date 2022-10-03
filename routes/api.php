@@ -23,7 +23,9 @@ Route::post('login', 'App\Http\Controllers\LoginController@login');
 Route::post('register', 'App\Http\Controllers\RegisterController@register');
 */
 Route::resource('ruta', App\Http\Controllers\RutaController::class)->only(['index', 'store', 'update', 'show', 'destroy']);
+Route::resource('pasajero', App\Http\Controllers\PasajeroController::class)->only(['index', 'store', 'update', 'show', 'destroy']);
 Route::resource('log', App\Http\Controllers\logController::class)->only(['index', 'store', 'update', 'show', 'destroy']);
+
 Route::post('/register', [App\Http\Controllers\AuthController::class, 'register']);
 Route::post('/login', [App\Http\Controllers\AuthController::class, 'login'])->name('login');
 

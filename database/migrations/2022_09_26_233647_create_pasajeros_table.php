@@ -18,6 +18,7 @@ class CreatePasajerosTable extends Migration
             $table->string('nombre');
             $table->string('cedula')->unique();
             $table->string('email')->unique();
+            $table->string('telefono')->unique();
             $table->timestamps();
         });
     }

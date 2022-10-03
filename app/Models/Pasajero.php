@@ -8,5 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class Pasajero extends Model
 {
     use HasFactory;
-    protected $fillable=['nombre','cedula','email'];
+    protected $fillable=['nombre','cedula','email', 'direccion', 'telefono'];
 }
