@@ -1,6 +1,3 @@
-
-
-
 <template>
     <main>
         <nav class="navbar navbar-dark bg-dark">
@@ -12,13 +9,13 @@
                 <button class="btn btn-secondary dropdown-toggle" type="button" id="rutas" data-bs-toggle="dropdown" aria-expanded="false">rutas</button>
                     <ul class="dropdown-menu" aria-labelledby="rutas">
                         <li><router-link to="/showrutas" class="dropdown-item">Rutas</router-link></li>
-                        <li><router-link to="/createrutas" class="dropdown-item">Nueva ruta</router-link> </li>
-                        <li><router-link to="/createnovedad" class="dropdown-item">¿Alguna novedad?</router-link> </li>
+                        <li><router-link  v-if="user_data != null" to="/createrutas" class="dropdown-item">Nueva ruta</router-link> </li>
+                        <!-- <li><router-link to="/createnovedad" class="dropdown-item">¿Alguna novedad?</router-link> </li> -->
                     </ul>
             </div>
              
 <!--_______________________________________clientes__________________________________________________________-->
-            <div class="dropdown">
+            <div  v-if="user_data != null" class="dropdown">
                 <button class="btn btn-secondary dropdown-toggle" type="button" id="clientes" data-bs-toggle="dropdown" aria-expanded="false">clientes</button>
                     <ul class="dropdown-menu" aria-labelledby="clientes">
                         <li><router-link to="/clientes" class="dropdown-item">ver clientes</router-link></li>
@@ -26,7 +23,7 @@
                     </ul>
             </div>
 <!--_______________________________________pasajes__________________________________________________________-->
-            <div class="dropdown">
+            <div  v-if="user_data != null" class="dropdown">
                 <button class="btn btn-secondary dropdown-toggle" type="button" id="pasaje" data-bs-toggle="dropdown" aria-expanded="false">Pasaje</button>
                     <ul class="dropdown-menu" aria-labelledby="pasaje">
                         <li><router-link to="/createpasaje" class="dropdown-item">Generar</router-link></li>
@@ -35,7 +32,7 @@
             </div>
 
 <!--_______________________________________autobus__________________________________________________________-->            
-            <div class="dropdown">
+            <div  v-if="user_data != null" class="dropdown">
                 <button class="btn btn-secondary dropdown-toggle" type="button" id="clientes" data-bs-toggle="dropdown" aria-expanded="false">autobuses</button>
                     <ul class="dropdown-menu" aria-labelledby="clientes">
                         <li><router-link to="/createbuses" class="dropdown-item">Registrar</router-link> </li>
@@ -45,7 +42,7 @@
             <div class="dropdown">
                 <button class="btn btn-secondary dropdown-toggle" type="button" id="clientes" data-bs-toggle="dropdown" aria-expanded="false">Empleados</button>
                     <ul class="dropdown-menu" aria-labelledby="clientes">
-                        <li><router-link to="/createempleado" class="dropdown-item">Registrar</router-link> </li>
+                        <li><router-link to="/createempleado"  v-if="user_data != null" class="dropdown-item">Registrar</router-link> </li>
                     </ul>
             </div>
 

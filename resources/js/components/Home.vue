@@ -4,8 +4,8 @@
         <h1 class="cover-heading text-white">JGTRAVELS VIAJES A TU ALCANCE.</h1>
         <p class="lead">Bienvenido a JGTravels, por favor ingrese o registrese</p>
         <p class="lead">
-          <router-link to="/login" class="btn btn-lg btn-secondary">Ingresar</router-link>
-          <router-link to="createempleado" class="btn btn-lg btn-secondary">Registrarse</router-link>
+          <router-link  v-if="user_data == null" to="/login" class="btn btn-lg btn-secondary">Ingresar</router-link>
+          <!-- <router-link  v-if="user_data != null" to="createempleado" class="btn btn-lg btn-secondary">Registrarse</router-link> -->
         </p>
 
         <footer class="mastfoot mt-auto">

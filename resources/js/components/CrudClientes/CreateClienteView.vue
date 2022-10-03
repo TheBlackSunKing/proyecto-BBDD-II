@@ -8,15 +8,15 @@
                     <div class="card-body">
                         <form v-on:submit.prevent="crear">
                             <label for="">Cedula</label>
-                            <input type="text" class="form-control mb-2" v-model="pasajero.Cedula">
+                            <input type="text" class="form-control mb-2" v-model="pasajero.cedula">
                             <label for="">Nombre Completo</label>
-                            <input type="text" class="form-control mb-2" v-model="pasajero.Nombre">
+                            <input type="text" class="form-control mb-2" v-model="pasajero.nombre">
                             <label for="">Email</label>
-                            <input type="text" class="form-control mb-2" v-model="pasajero.Email">
+                            <input type="text" class="form-control mb-2" v-model="pasajero.email">
                             <label for="">Direccion</label>
-                            <input type="text" class="form-control mb-2" v-model="pasajero.Direccion">
+                            <input type="text" class="form-control mb-2" v-model="pasajero.direccion">
                             <label for="">Telefono</label>
-                            <input type="text" class="form-control mb-2" v-model="pasajero.Telefono">
+                            <input type="text" class="form-control mb-2" v-model="pasajero.telefono">
                             
                             <button type="submit" class="btn btn-secondary">Completar</button>
                             
@@ -37,7 +37,6 @@ export default{
                 cedula:"",
                 nombre:"",
                 email:"",
-                direccion:"",
                 telefono:""
 
             }
@@ -47,7 +46,7 @@ export default{
         async crear(){
             await this.axios.post('/api/pasajero', this.pasajero)
                .then(response=>{
-                this.$router.push({name:"pasajeros"})
+                this.$router.push({name:"clientes"})
                })
                .catch(error=>{
                 console.log(error)

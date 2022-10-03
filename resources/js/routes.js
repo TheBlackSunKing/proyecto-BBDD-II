@@ -127,13 +127,13 @@ export const routes=[
 	{
 		name:'empleadosCrear',
 		path:'/createbus',
-		component:ShowBusView
+		component:ShowBusesView
 
 	},
 	{
 		name:'busesEditar',
 		path:'/editar/:id',
-		component:EditBusView
+		component:EditBusesView
 
 	},
 

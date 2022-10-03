@@ -13,8 +13,8 @@
                                 <th>Nombre</th>
                                 <th>Cedula</th>
                                 <th>Email</th>
-                                <th>Direccion</th>
                                 <th>Telefono</th>
+                                <th></th>
                             </tr>
                         </thead>
                         <tbody> 
@@ -23,7 +23,6 @@
                                 <td>{{ pasajero.nombre }}</td>
                                 <td>{{ pasajero.cedula }}</td>
                                 <td>{{ pasajero.email}}</td>
-                                <td>{{ pasajero.direccion }}</td>
                                 <td>{{ pasajero.telefono }}</td>
                                 <td>
                                     <router-link :to='{name:"pasajerosEditar", params:{id:pasajero.id}}' class="btn btn-info">editar</router-link>
@@ -47,11 +46,11 @@ export default {
         },
 
         mounted() {
-            this.mostrarPasajeros
+            this.mostrarPasajeros();
         },
 
         methods:{
-            async mostrarRutas(){
+            async mostrarPasajeros(){
                 await this.axios.get('/api/pasajero')
                     .then(response=>{
                         this.pasajeros=response.data
