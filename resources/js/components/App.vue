@@ -26,18 +26,18 @@
             <div  v-if="user_data != null" class="dropdown">
                 <button class="btn btn-secondary dropdown-toggle" type="button" id="pasaje" data-bs-toggle="dropdown" aria-expanded="false">Pasaje</button>
                     <ul class="dropdown-menu" aria-labelledby="pasaje">
+                        <li><router-link to="/ShowPasaje" class="dropdown-item">Ver</router-link></li>
                         <li><router-link to="/createpasaje" class="dropdown-item">Generar</router-link></li>
-                        
                     </ul>
             </div>
 
 <!--_______________________________________autobus__________________________________________________________-->            
-            <div  v-if="user_data != null" class="dropdown">
+<!--             <div  v-if="user_data != null" class="dropdown">
                 <button class="btn btn-secondary dropdown-toggle" type="button" id="clientes" data-bs-toggle="dropdown" aria-expanded="false">autobuses</button>
                     <ul class="dropdown-menu" aria-labelledby="clientes">
                         <li><router-link to="/createbuses" class="dropdown-item">Registrar</router-link> </li>
                     </ul>
-            </div>
+            </div> -->
 <!--_______________________________________empleado__________________________________________________________-->            
             <div class="dropdown">
                 <button class="btn btn-secondary dropdown-toggle" type="button" id="clientes" data-bs-toggle="dropdown" aria-expanded="false">Empleados</button>

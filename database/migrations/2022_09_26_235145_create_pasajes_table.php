@@ -17,11 +17,13 @@ class CreatePasajesTable extends Migration
             $table->id();
             $table->unsignedBigInteger('pasajero_id');
             $table->foreign('pasajero_id')->references('id')->on('pasajeros');
-            $table->unsignedBigInteger('autobus_id');
-            $table->foreign('autobus_id')->references('id')->on('autobuses');
-            $table->integer('puesto');
-            $table->date('fecha_venta');
-            $table->date('fecha_salida');
+            //$table->unsignedBigInteger('autobus_id');
+            $table->string('metodo');
+            $table->string('referencia');
+            //$table->foreign('autobus_id')->references('id')->on('autobuses');
+            //$table->integer('puesto');
+            $table->timestamp('fecha_venta');
+            $table->timestamp('fecha_salida');
             $table->float('total');
             $table->timestamps();
         });

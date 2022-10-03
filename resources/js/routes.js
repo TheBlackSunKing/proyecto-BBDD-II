@@ -116,6 +116,12 @@ export const routes=[
 		component:BuscarPasajesView
 
 	},
+	{
+		name:'pasajeBuscar',
+		path:'/ShowPasaje',
+		component:ShowPasajesView
+
+	},
 
 //--------crud buses--------------------------
 	{

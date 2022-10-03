@@ -14,7 +14,10 @@
                             <input type="email"  v-model="form.email" class="form-control mb-2" placeholder="Email">
                             <label for="">Cedula</label>
                             <input type="text"  v-model="form.cedula" class="form-control mb-2" placeholder="Cedula">
-                            
+                            <label for="">Contraseña</label>
+                            <input type="password"  v-model="form.password" class="form-control mb-2" placeholder="*********">
+                            <label for="">Confirma Contraseña</label>
+                            <input type="password"  v-model="form.password" class="form-control mb-2" placeholder="*********">
                             <button  class="btn btn-secondary">Guardar</button>
                             
                         </form>
@@ -24,3 +27,30 @@
         </div>
     </div>
 </template>
+<script>
+    export default {
+        data(){
+            return{
+                form:{
+                    name: '',
+                    cedula:'',
+                    email: '',
+                    password:'',
+                    password_confirmation:''
+                },
+                errors:[]
+            }
+        },
+        methods:{
+            saveForm(){
+                axios.post('/api/register', this.form).then(() =>{
+                    console.log('saved');
+                }).catch((error) =>{
+                    this.errors = error.response.data.errors;
+                    console.log(error.response.data.error);
+                })
+                this.$router.push({ name: "home"});
+            }
+        }
+      }
+</script>

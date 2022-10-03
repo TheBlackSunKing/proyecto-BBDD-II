@@ -28,14 +28,16 @@ Route::post('register', 'App\Http\Controllers\RegisterController@register');
 
 Route::post('/register', [App\Http\Controllers\AuthController::class, 'register']);
 Route::post('/login', [App\Http\Controllers\AuthController::class, 'login'])->name('login');
-
+Route::resource('pasajero', App\Http\Controllers\PasajeroController::class)->only(['index', 'store', 'update', 'show', 'destroy']);
+Route::resource('ruta', App\Http\Controllers\RutaController::class)->only(['index', 'store', 'update', 'show', 'destroy']);
+Route::resource('log', App\Http\Controllers\logController::class)->only(['index', 'store', 'update', 'show', 'destroy']);
+Route::resource('cliente', App\Http\Controllers\PasajeController::class)->only(['index', 'store', 'update', 'show', 'destroy']);
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
 Route::middleware('auth:sanctum')->group(function () {
-    Route::resource('pasajero', App\Http\Controllers\PasajeroController::class)->only(['index', 'store', 'update', 'show', 'destroy']);
+    
     Route::post('/logout', [App\Http\Controllers\AuthController::class, 'logout']);
-    Route::resource('ruta', App\Http\Controllers\RutaController::class)->only(['index', 'store', 'update', 'show', 'destroy']);
-    Route::resource('log', App\Http\Controllers\logController::class)->only(['index', 'store', 'update', 'show', 'destroy']);
+   
 });

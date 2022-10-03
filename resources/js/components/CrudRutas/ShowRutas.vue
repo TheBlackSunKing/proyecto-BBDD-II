@@ -24,8 +24,8 @@
                                 <td>{{ ruta.precio }}</td>
                                 <td>{{ ruta.horas }}</td>
                                 <td>
-                                    <router-link :to='{name:"rutasEditar", params:{id:ruta.id}}' class="btn btn-info">editar</router-link>
-                                    <a type="button" @click="borrarRuta(ruta.id)" class="btn btn-danger">eliminar</a>
+                                    <router-link :to='{name:"rutasEditar", params:{id:ruta.id}}' v-if="user_data != null" class="btn btn-info">editar</router-link>
+                                    <a type="button" @click="borrarRuta(ruta.id)" v-if="user_data != null" class="btn btn-danger">eliminar</a>
                                 </td>
                             </tr>
                         </tbody>
@@ -40,11 +40,14 @@
 export default {
         data(){
             return{
-                rutas:[]
+                rutas:[],
+                user_data: null
             }
         },
 
         mounted() {
+            if (sessionStorage.getItem('user')!= null) 
+                this.user_data = JSON.parse(sessionStorage.getItem('user'));
             this.mostrarRutas()
         },
 
